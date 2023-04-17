@@ -1,0 +1,75 @@
+/* Fichier de style pour le site Pizza Shop */
+
+/* Réinitialisation des styles par défaut du navigateur */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f8d7da;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+main {
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Styles spécifiques pour la navbar */
+.navbar {
+  background-color: #343a40;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Styles spécifiques pour les pages */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-container h1, .page-container h2, .page-container h3, .page-container p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.page-container img {
+  max-width: 100%;
+}
+
+/* Styles spécifiques pour la page d
