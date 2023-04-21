@@ -35,6 +35,9 @@ session_start();
                 case 'engagements':
                     include_once 'pages/engagements.php';
                     break;
+                case 'compte':
+                        include_once 'pages/compte.php';
+                        break;
                 default:
                     include_once 'pages/accueil.php';
                     break;
@@ -44,10 +47,5 @@ session_start();
         }
         ?>
     </main>
-
-    <footer>
-        <p>© Pizza Shop. Tous droits réservés.</p>
-    </footer>
-
 </body>
 </html>

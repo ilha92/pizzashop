@@ -21,6 +21,5 @@
         </ul>
         <p>Nous nous engageons à vous offrir une expérience culinaire exceptionnelle avec nos délicieuses pizzas et notre service de qualité. N'hésitez pas à nous rendre visite pour déguster nos savoureuses pizzas.</p>
 </main>
-
 </body>
 </html>

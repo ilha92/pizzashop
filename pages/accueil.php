@@ -12,7 +12,7 @@
     <main>
         <h2>Bienvenue sur Pizza Shop</h2>
         <p>Découvrez nos délicieuses pizzas faites maison avec des ingrédients frais et de qualité. Choisissez parmi notre large gamme de pizzas et profitez de nos offres spéciales.</p>
-        <a href="carte.php">Voir la carte</a>
+        <a href="pages/carte.php">Voir la carte</a>
     </main>
     <footer>
         <p>© 2023 Pizza Shop. Tous droits réservés.</p>

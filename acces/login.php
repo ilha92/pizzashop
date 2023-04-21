@@ -1,6 +1,6 @@
-<?php
-// Démarrer la session
+<?php 
 session_start();
+$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;','root', '');
 
 // Vérifier si l'utilisateur est déjà connecté
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
@@ -9,64 +9,82 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
     exit();
 }
 
-// Inclure le fichier de configuration de la base de données
-require_once('config.php');
+// Traitement du formulaire de connexion
+if(isset($_POST['connexion'])){
+    if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
+        $pseudo = htmlspecialchars($_POST['pseudo']);
+        $mdp = sha1($_POST['mdp']); // Attention, utiliser un algorithme de hachage sécurisé serait préférable
 
-// Vérifier si le formulaire de connexion est soumis
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Récupérer les données du formulaire
-    $pseudo = $_POST['pseudo'];
-    $mdp = $_POST['mdp'];
-
-    // Requête SQL pour vérifier les informations de connexion
-    $query = $bdd->prepare("SELECT * FROM utilisateurs WHERE pseudo = :pseudo AND mdp = :mdp");
-    $query->bindParam(':pseudo', $pseudo);
-    $query->bindParam(':mdp', $mdp);
-    $query->execute();
-    $result = $query->fetch(PDO::FETCH_ASSOC);
-
-    // Vérifier si les informations de connexion sont valides
-    if ($result) {
-        // Définir la variable de session pour indiquer que l'utilisateur est connecté
-        $_SESSION['logged_in'] = true;
-        $_SESSION['pseudo'] = $result['pseudo'];
-
-        // Rediriger vers la page d'accueil
-        header("Location: ../index.php");
-        exit();
-    } else {
-        // Message d'erreur en cas d'échec de connexion
-        $error = "Pseudo ou mot de passe incorrect";
+        $recupUser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ? AND mdp = ?');
+        $recupUser->execute(array($pseudo, $mdp));
+        if($recupUser->rowCount() > 0){
+            $user = $recupUser->fetch();
+            $_SESSION['pseudo'] = $user['pseudo'];
+            $_SESSION['mdp'] = $user['mdp'];
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['logged_in'] = true; // Définir une variable de session pour indiquer que l'utilisateur est connecté
+            // Rediriger vers la page d'accueil ou une autre page appropriée
+            header("Location: ../index.php");
+            exit();
+        } else {
+            echo "Pseudo ou mot de passe incorrect.";
+        }
+    } else { 
+        echo "Veuillez remplir tous les champs...";
     }
 }
-?>
 
+// Traitement du formulaire de déconnexion
+if(isset($_POST['deconnexion'])){
+    // Détruire toutes les variables de session et rediriger vers la page de connexion
+    session_unset();
+    session_destroy();
+    exit();
+}
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Se connecter</title>
+<title>Connexion</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+
+ <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("mdp");
+            var toggleBtn = document.getElementById("toggleBtn");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleBtn.innerHTML = "Cacher";
+            } else {
+                passwordInput.type = "password";
+                toggleBtn.innerHTML = "Afficher";
+            }
+        }
+    </script>
 </head>
 <body>
-    <header>
+<header>
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
     </header>
-    <main>
-        <h2>Se connecter</h2>
-        <form method="post" action="">
-            <label for="pseudo">Pseudo :</label>
-            <input type="text" id="pseudo" name="pseudo" required>
-            <label for="mdp">Mot de passe :</label>
-            <input type="password" id="mdp" name="mdp" required>
-            <input type="submit" value="Se connecter">
-        </form>
-        <?php
-        // Afficher le message d'erreur s'il existe
-        if (isset($error)) {
-            echo '<p class="error">' . $error . '</p>';
-        }
-        ?>
-    </main>
+    <main><h2>Se connecter</h2>
+        <!-- Formulaire de connexion -->
+<form method="post" action="" align="center">
+            <input type="text" name="pseudo" autocomplete="off" placeholder="Pseudo">
+            <br>
+            <div class="password-toggle">
+                <input type="password" name="mdp" id="mdp" autocomplete="off" placeholder="Mot de passe">
+                <span class="toggle-btn" id="toggleBtn" onclick="togglePassword()">Afficher</span>
+            </div>
+            <br/><br/>
+             <input type="submit" name="connexion" value="Connexion">
+</form></main>
+    
+<!-- Formulaire de déconnexion -->
+<form method="post" action="">
+    <input type="submit" name="deconnexion" value="Déconnexion">
+</form>
 </body>
 </html>
