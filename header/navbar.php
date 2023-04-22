@@ -16,6 +16,7 @@
             <li><a href="../pages/engagements.php">Engagements</a></li>
             <li><a href="../pages/panier.php">Panier</a></li>
             <li><a href="../pages/compte.php">Mon compte</a></li>
+            <li><a href="../pages/avis.php">Donner son avis</a></li>
             <?php
             // Vérifier si l'utilisateur est connecté
             if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {

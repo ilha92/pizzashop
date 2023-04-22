@@ -9,7 +9,14 @@ session_start();
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
+<head>
+    <title>Pizza Shop</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+</head>
 <body>
+     <header>
+        <h1>Pizza Shop</h1>
+     </header>
     <header>
         <nav>
         <ul>
@@ -19,6 +26,7 @@ session_start();
             <li><a href="../pages/contact.php">Contact</a></li>
             <li><a href="../pages/engagements.php">Engagements</a></li>
             <li><a href="../pages/panier.php">Panier</a></li>
+            
             <li><a href="../pages/compte.php">Mon compte</a></li>
             <?php
             // Vérifier si l'utilisateur est connecté
@@ -34,6 +42,7 @@ session_start();
     </header>
 
     <main>
+        <br><br>
         <h1>Nous contacter</h1>
         <p>Vous pouvez nous contacter via les coordonnées suivantes :</p>
         <ul>

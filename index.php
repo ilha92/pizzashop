@@ -6,12 +6,13 @@ session_start();
 <html>
 <head>
     <title>Pizza Shop</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
 <body>
-    <?php include_once 'header/navbar.php'; ?>
-
+     <header>
+        <h1>Pizza Shop</h1>
+        <?php include_once 'header/navbar.php'; ?>
+     </header>
     <main>
         <?php
         if (isset($_GET['page'])) {

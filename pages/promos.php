@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,6 +39,7 @@
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
     </header>
+    <br><br>
     <main>
         <h2>Les Promos du Jour</h2>
         <!-- Afficher les produits en promotion ici -->
@@ -57,6 +61,7 @@
             <!-- Ajouter d'autres articles en promotion ici -->
         </ul>
     </main>
+    <br><br><br><br>
     <footer>
         <p>© 2023 Pizza Shop. Tous droits réservés.</p>
     </footer>

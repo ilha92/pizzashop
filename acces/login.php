@@ -69,6 +69,7 @@ if(isset($_POST['deconnexion'])){
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
     </header>
+    <br>
     <main><h2>Se connecter</h2>
         <!-- Formulaire de connexion -->
 <form method="post" action="" align="center">

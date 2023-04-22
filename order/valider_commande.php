@@ -33,6 +33,7 @@
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
     </header>
+    <br>
     <main>
         <h2>Valider Commande</h2>
         <?php
@@ -40,6 +41,7 @@
                 $total = 0;
         ?>
         <table>
+            <br>
             <tr>
                 <th>Produit</th>
                 <th>Prix</th>

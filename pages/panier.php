@@ -70,6 +70,7 @@
         <?php require_once('../header/navbar.php'); ?>
     </header>
     <main>
+        <br><br>
         <h2>Panier</h2>
         <?php
             if(isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
@@ -133,6 +134,7 @@
          }
      ?>
 </main>
+<br><br><br><br><br><br><br>
 <footer>
 <p>© Pizza Shop. Tous droits réservés.</p>
 </footer>

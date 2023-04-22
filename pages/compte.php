@@ -22,11 +22,16 @@ if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mon Compte</title>
-    <?php require_once('../header/navbar.php'); ?>
+    <title>Pizza Shop</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
 <body>
+<header>
+        <h1>Pizza Shop</h1>
+        <?php require_once('../header/navbar.php'); ?>
+     </header>
     <h1>Bienvenue sur votre compte, <?php echo $pseudo; ?> !</h1>
+    <br><br><br>
     <!-- Afficher les informations de l'utilisateur -->
     <p>Nom d'utilisateur : <?php echo $pseudo; ?></p>
     <!-- Ajouter d'autres informations de l'utilisateur ici -->

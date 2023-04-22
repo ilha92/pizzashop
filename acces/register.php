@@ -54,6 +54,7 @@ if(isset($_POST['valider'])){
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
     </header>
+    <br>
     <main>
         <h2>S'inscrire</h2>
         <form method="post" action="" align="center">

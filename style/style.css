@@ -12,95 +12,260 @@ body {
 
 /* Appliquer un arrière-plan et une couleur de texte pour le header */
 header {
-  background-color: #F40;
-  color: #FFF;
+  background-color:beige;
+  color: black;
   padding: 10px;
 }
 
-/* Centrer le logo dans le header */
+/* Style de base pour la navbar */
 nav {
-  display: flex;
-  justify-content: center;
+  background-color: #000; /* Couleur de fond de la navbar */
+  overflow: hidden; /* Pour gérer les éléments qui débordent de la navbar */
 }
 
-/* Styler les liens du menu de navigation */
+/* Style pour les liens de la navbar */
 nav ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
-nav ul li {
-  display: inline-block;
-  margin-right: 10px;
+nav li {
+  float: left; /* Pour aligner les liens à gauche */
 }
 
-nav ul li a {
-  color: #FFF;
-  text-decoration: none;
-  padding: 5px 10px;
+nav a {
+  display: block; /* Pour que les liens prennent toute la largeur de la navbar */
+  color: #fff; /* Couleur du texte des liens */
+  text-align: center; /* Pour centrer le texte dans les liens */
+  padding: 14px 20px; /* Espacement du texte par rapport aux bords de la navbar */
+  text-decoration: none; /* Pour enlever la décoration par défaut des liens */
+  transition: color 0.3s; /* Animation de transition pour la couleur du texte */
 }
 
-/* Styler les liens du menu de navigation au survol */
-nav ul li a:hover {
-  background-color: #FFF;
-  color: #F40;
-  border-radius: 3px;
+/* Style pour les liens actifs de la navbar */
+nav a.active {
+  background-color: #333; /* Couleur de fond pour les liens actifs */
 }
 
-/* Appliquer un espacement entre les éléments du menu de navigation */
-nav ul li:not(:last-child) {
-  margin-right: 15px;
+/* Style pour les liens au survol de la souris */
+nav a:hover {
+  color: #ed1c24; /* Couleur du texte au survol de la souris */
 }
 
 /*carte*/
-/* CSS pour le conteneur des boutons */
-#toutes, #classique, #nouveau, #vegan {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* CSS pour les boutons */
-button {
-  background-color: #f8f8f8;
-  color: #000;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  margin: 0 10px;
-}
-
-/* CSS pour les éléments de liste */
-ul {
-  list-style-type: none;
-  padding: 0;
+/* Centrer les boutons des catégories au milieu du site */
+.button {
   display: flex;
   justify-content: center;
+  margin-top: 20px; /* Ajouter une marge en haut pour l'espace */
 }
-
-li {
-  margin: 0 10px;
-  padding: 20px;
-  border: 1px solid #ccc;
+/* Styliser les boutons de catégorie */
+button {
+  background-color: blue; /* Couleur de fond bleue */
+  color: #fff; /* Couleur du texte en blanc */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  margin-right: 10px; /* Marge droite entre les boutons */
+  border: none; /* Supprimer la bordure */
+  cursor: pointer; /* Curseur en forme de main au survol */
 }
-
-li:not(:first-child) {
-  border: none; /* Supprimer la bordure pour tous les éléments li, sauf le premier */
-}
-
-li h2, li h3, li p {
-  margin: 0;
-  padding: 0;
-}
-
-/* CSS pour le bouton Commander */
+/* Styliser le bouton de commande */
 .commander {
-  background-color: #ffcc00;
-  color: #fff;
+  background-color: black; /* Couleur de fond noire */
+  color: #fff; /* Couleur du texte en blanc */
+}
+
+/* Styliser les boutons de catégorie au survol */
+button:hover {
+  background-color: red; /* Couleur de fond rouge au survol */
+}
+
+/* Aligner les articles en ligne de 3 */
+.pizza ul {
+  display: flex; /* Utiliser le modèle de boîte flexible pour aligner les articles */
+  flex-wrap: wrap; /* Enrouler les articles sur plusieurs lignes si nécessaire */
+  list-style-type: none; /* Supprimer les puces de liste */
+  padding: 0; /* Supprimer le remplissage par défaut */
+}
+
+/* Styliser les articles */
+li {
+  flex-basis: 33.33%; /* Définir la largeur de base à 33.33% pour afficher 3 articles par ligne */
+  padding: 20px; /* Espacement intérieur des articles */
+  box-sizing: border-box; /* Inclure la bordure et le remplissage dans la largeur et la hauteur des articles */
+}
+
+/* Styliser les titres d'article */
+h3 {
+  margin: 0 0 10px; /* Supprimer la marge inférieure par défaut et ajouter une marge de 10px en bas */
+}
+
+/* Styliser les descriptions d'article */
+p {
+  margin: 0; /* Supprimer la marge par défaut */
+}
+
+/* Styliser les boutons de commande d'article */
+.commander {
+  background-color: black; /* Couleur de fond noire */
+  color: #fff; /* Couleur du texte en blanc */
+  padding: 5px 10px; /* Espacement intérieur du bouton */
+  margin-top: 10px; /* Marge supérieure entre le texte et le bouton */
+}
+/* Login*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+form {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+form input[type="submit"] {
+    background-color: #008CBA;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #007A99;
+}
+
+.password-toggle {
+    position: relative;
+}
+
+.password-toggle input[type="password"] {
+    padding-right: 40px;
+}
+
+.password-toggle .toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #008CBA;
+}
+
+.password-toggle .toggle-btn:hover {
+    color: #007A99;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+form {
+  width: 300px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"] {
+  width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
   border: none;
+  border-radius: 3px;
+}
+
+form input[type="submit"] {
+  background-color: #008CBA;
+  color: #ffffff;
+  font-weight: bold;
   cursor: pointer;
 }
 
-/* Ne pas encadrer le texte dans la barre de navigation */
-nav ul li:first-child a {
-  border: none;
+form input[type="submit"]:hover {
+  background-color: #007A99;
 }
+
+.password-toggle {
+  position: relative;
+}
+
+.password-toggle input[type="password"] {
+  padding-right: 40px;
+}
+
+.password-toggle .toggle-btn {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #008CBA;
+}
+
+.password-toggle .toggle-btn:hover {
+  color: #007A99;
+}
+
+/* Style CSS pour la mise en page des avis */
+.avis-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.note {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.commentaire {
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.options a {
+  margin-left: 10px;
+}
+
+/* Style CSS pour le formulaire d'avis */
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+}
+
