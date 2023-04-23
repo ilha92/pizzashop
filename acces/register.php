@@ -11,8 +11,8 @@ if(isset($_POST['valider'])){
     if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $mdp = sha1($_POST['mdp']);
-        $insertUser = $bdd->prepare('INSERT INTO users(pseudo, mdp) VALUES(?, ?)');
-        $insertUser->execute(array($pseudo, $mdp));
+        $insertUser = $bdd->prepare('INSERT INTO users(pseudo, mdp, avatar) VALUES(?, ?, ?)');
+        $insertUser->execute(array($pseudo, $mdp, "default.jpg"));
 
         $recupUser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ? AND mdp = ?');
         $recupUser->execute(array($pseudo, $mdp));
