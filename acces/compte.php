@@ -45,7 +45,7 @@ if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
         }
         else
         {
-            echo "Extension de fichier non valide";
+            echo "Extension de fichier non valide jpg, jpeg, gif, png";
         }
     }
     else

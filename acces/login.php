@@ -11,15 +11,17 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
 
 // Traitement du formulaire de connexion
 if(isset($_POST['connexion'])){
-    if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
+    if(!empty($_POST['pseudo']) AND !empty($_POST['mdp']) && !empty($_POST['email'])){
         $pseudo = htmlspecialchars($_POST['pseudo']);
+        $email = htmlspecialchars($_POST['email']);
         $mdp = sha1($_POST['mdp']); // Attention, utiliser un algorithme de hachage sécurisé serait préférable
 
-        $recupUser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ? AND mdp = ?');
-        $recupUser->execute(array($pseudo, $mdp));
+        $recupUser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ? AND email = ? AND mdp = ?');
+        $recupUser->execute(array($pseudo, $email, $mdp));
         if($recupUser->rowCount() > 0){
             $user = $recupUser->fetch();
             $_SESSION['pseudo'] = $user['pseudo'];
+            $_SESSION['email'] = $user['email'];
             $_SESSION['mdp'] = $user['mdp'];
             $_SESSION['id'] = $user['id'];
             $_SESSION['logged_in'] = true; // Définir une variable de session pour indiquer que l'utilisateur est connecté
@@ -27,7 +29,7 @@ if(isset($_POST['connexion'])){
             header("Location: ../index.php");
             exit();
         } else {
-            echo "Pseudo ou mot de passe incorrect.";
+            echo "Pseudo, e-mail ou mot de passe incorrect.";
         }
     } else { 
         echo "Veuillez remplir tous les champs...";
@@ -41,51 +43,79 @@ if(isset($_POST['deconnexion'])){
     session_destroy();
     exit();
 }
+
+// Traitement du formulaire de réinitialisation de mot de passe
+if(isset($_POST['reset_password'])){
+    if(!empty($_POST['email']) && !empty($_POST['new_password']) && !empty($_POST['confirm_password'])){
+        $email = htmlspecialchars($_POST['email']);
+        $new_password = sha1($_POST['new_password']); // Attention, utiliser un algorithme de hachage sécurisé serait préférable
+        $confirm_password = sha1($_POST['confirm_password']); // Attention, utiliser un algorithme de hachage sécurisé serait préférable
+
+        $recupUser = $bdd->prepare('SELECT * FROM users WHERE email = ?');
+        $recupUser->execute(array($email));
+        if($recupUser->rowCount() > 0){
+            $user = $recupUser->fetch();
+            if($new_password == $confirm_password){
+                $updatePassword = $bdd->prepare('UPDATE users SET mdp = ? WHERE email = ?');
+                $updatePassword->execute(array($new_password, $email));
+                echo "Mot de passe réinitialisé avec succès.";
+            } else {
+                echo "Les nouveaux mots de passe ne correspondent pas.";
+            }
+        } else {
+            echo "Aucun compte associé à cet e-mail.";
+        }
+    } else {
+        echo "Veuillez remplir tous les champs.";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Connexion</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Connexion</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
-
- <script>
-        function togglePassword() {
-            var passwordInput = document.getElementById("mdp");
-            var toggleBtn = document.getElementById("toggleBtn");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                toggleBtn.innerHTML = "Cacher";
-            } else {
-                passwordInput.type = "password";
-                toggleBtn.innerHTML = "Afficher";
-            }
-        }
-    </script>
 </head>
+
 <body>
-<header>
+    <header>
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
-    </header>
-    <br>
-    <main><h2>Se connecter</h2>
-        <!-- Formulaire de connexion -->
-<form method="post" action="" align="center">
-            <input type="text" name="pseudo" autocomplete="off" placeholder="Pseudo">
-            <br>
-            <div class="password-toggle">
-                <input type="password" name="mdp" id="mdp" autocomplete="off" placeholder="Mot de passe">
-                <span class="toggle-btn" id="toggleBtn" onclick="togglePassword()">Afficher</span>
-            </div>
-            <br/><br/>
-             <input type="submit" name="connexion" value="Connexion">
-</form></main>
-    
-<!-- Formulaire de déconnexion -->
-<form method="post" action="">
-    <input type="submit" name="deconnexion" value="Déconnexion">
-</form>
+     </header>
+    <h1>Connexion</h1>
+    <form method="POST" action="">
+        <label for="pseudo">Pseudo :</label>
+        <input type="text" name="pseudo" id="pseudo" required>
+        <br>
+        <label for="email">E-mail :</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+        <label for="mdp">Mot de passe :</label>
+        <input type="password" name="mdp" id="mdp" required>
+        <br>
+        <input type="submit" name="connexion" value="Se connecter">
+    </form>
+
+    <h1>Réinitialisation de mot de passe</h1>
+    <form method="POST" action="">
+        <label for="email_reset">E-mail :</label>
+        <input type="email" name="email" id="email_reset" required>
+        <br><br>
+        <label for="new_password">Nouveau mot de passe :</label>
+        <input type="password" name="new_password" id="new_password" required>
+        <br>
+        <label for="confirm_password">Confirmer le mot de passe :</label>
+        <input type="password" name="confirm_password" id="confirm_password" required>
+        <br>
+        <input type="submit" name="reset_password" value="Réinitialiser le mot de passe">
+    </form>
+
+    <h1>Déconnexion</h1>
+    <form method="POST" action="">
+        <input type="submit" name="deconnexion" value="Se déconnecter">
+    </form>
+
 </body>
 </html>

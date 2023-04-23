@@ -49,7 +49,7 @@ if ($result !== false) {
     <form method="post" action="">
         <label for="note">Note :</label>
         <input type="number" name="note" id="note" min="1" max="5" required>
-        <label for="commentaire">Commentaire :</label>
+        <label for="commentaire">laisser un avis :</label>
         <textarea name="commentaire" id="commentaire" rows="5" required></textarea>
         <input type="submit" name="submit" value="Soumettre">
     </form>

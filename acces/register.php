@@ -8,11 +8,12 @@ if(isset($_POST['valider'])){
         header("Location: ../index.php");
         exit();
     }
-    if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
+    if(!empty($_POST['pseudo']) AND !empty($_POST['mdp']) && !empty($_POST['email'])){
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $mdp = sha1($_POST['mdp']);
-        $insertUser = $bdd->prepare('INSERT INTO users(pseudo, mdp, avatar) VALUES(?, ?, ?)');
-        $insertUser->execute(array($pseudo, $mdp, "default.jpg"));
+        $email = htmlspecialchars($_POST['email']);
+        $insertUser = $bdd->prepare('INSERT INTO users(pseudo, mdp, email, avatar) VALUES(?, ?, ?, ?)');
+        $insertUser->execute(array($pseudo, $mdp, $email, "default.jpg"));
 
         $recupUser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ? AND mdp = ?');
         $recupUser->execute(array($pseudo, $mdp));
@@ -34,7 +35,7 @@ if(isset($_POST['valider'])){
 <head>
     <title>S'inscrire</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
- <script>
+    <script>
         function togglePassword() {
             var passwordInput = document.getElementById("mdp");
             var toggleBtn = document.getElementById("toggleBtn");
@@ -59,6 +60,8 @@ if(isset($_POST['valider'])){
         <h2>S'inscrire</h2>
         <form method="post" action="" align="center">
             <input type="text" name="pseudo" autocomplete="off" placeholder="Pseudo">
+            <br>
+            <input type="email" name="email" autocomplete="off" placeholder="Email">
             <br>
             <div class="password-toggle">
                 <input type="password" name="mdp" id="mdp" autocomplete="off" placeholder="Mot de passe">
