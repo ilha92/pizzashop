@@ -69,6 +69,7 @@ if(isset($_POST['valider'])){
             </div>
             <br/><br/>
             <input type="submit" name="valider" value="Valider">
+            <a href="login.php">login ?</a> <!-- Lien pour réinitialiser le mot de passe -->
         </form>
         <?php
         // Afficher le message d'erreur s'il existe

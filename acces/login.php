@@ -96,26 +96,8 @@ if(isset($_POST['reset_password'])){
         <input type="password" name="mdp" id="mdp" required>
         <br>
         <input type="submit" name="connexion" value="Se connecter">
+        <a href="reinitialisation.php">Mot de passe oublié ?</a> <!-- Lien pour réinitialiser le mot de passe -->
+        <a href="register.php">register ?</a> <!-- Lien pour réinitialiser le mot de passe -->
     </form>
-
-    <h1>Réinitialisation de mot de passe</h1>
-    <form method="POST" action="">
-        <label for="email_reset">E-mail :</label>
-        <input type="email" name="email" id="email_reset" required>
-        <br><br>
-        <label for="new_password">Nouveau mot de passe :</label>
-        <input type="password" name="new_password" id="new_password" required>
-        <br>
-        <label for="confirm_password">Confirmer le mot de passe :</label>
-        <input type="password" name="confirm_password" id="confirm_password" required>
-        <br>
-        <input type="submit" name="reset_password" value="Réinitialiser le mot de passe">
-    </form>
-
-    <h1>Déconnexion</h1>
-    <form method="POST" action="">
-        <input type="submit" name="deconnexion" value="Se déconnecter">
-    </form>
-
 </body>
 </html>
