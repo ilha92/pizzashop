@@ -323,3 +323,85 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
 }
+/*Panier*/
+/* Style pour la table du panier */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Style pour le bouton de suppression */
+.supprimer {
+  background-color: #f44336;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.supprimer:hover {
+  background-color: #d32f2f;
+}
+
+/* Style pour le bouton de confirmation de commande */
+#btnCommander {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#btnCommander:hover {
+  background-color: #388e3c;
+}
+/*index*/
+
+/* Mise en page du contenu principal */
+main {
+  padding: 20px;
+}
+
+/* Ajout de styles spécifiques pour les pages incluses */
+.main-content {
+  margin-bottom: 20px; /* Ajout d'une marge en bas pour l'espace */
+}
+
+.footer {
+  text-align: center;
+  background-color: #F8B195;
+  padding: 10px;
+  color: #fff;
+}
+/*COMPTE*/
+/* Styles pour la page de compte */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.container p {
+  font-size: 24px;
+  font-weight: bold;
+}
