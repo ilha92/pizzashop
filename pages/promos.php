@@ -46,14 +46,18 @@ session_start();
         <ul>
             <li>
                 <h3>Pizza Margherita</h3>
+                <br>
                 <p>Pizza classique avec de la sauce tomate, du fromage et des tomates fraîches.</p>
+                <br>
                 <p>Prix: 10.99 €</p>
                 <!-- Bouton Commander pour ajouter au panier -->
                 <button class="commander" data-produit="Pizza Margherita" data-prix="10.99">Commander</button>
             </li>
             <li>
                 <h3>Pizza Pepperoni</h3>
+                <br>
                 <p>Pizza garnie de pepperoni, de fromage et de sauce tomate.</p>
+                <br>
                 <p>Prix: 12.99 €</p>
                 <!-- Bouton Commander pour ajouter au panier -->
                 <button class="commander" data-produit="Pizza Pepperoni" data-prix="12.99">Commander</button>

@@ -12,8 +12,8 @@ body {
 
 /* Appliquer un arrière-plan et une couleur de texte pour le header */
 header {
-  background-color:beige;
-  color: black;
+  background-color:rgb(14, 14, 11);
+  color: wheat;
   padding: 10px;
 }
 
@@ -62,10 +62,10 @@ nav a:hover {
 }
 /* Styliser les boutons de catégorie */
 button {
-  background-color: blue; /* Couleur de fond bleue */
+  background-color: rgb(34, 16, 16); /* Couleur de fond bleue */
   color: #fff; /* Couleur du texte en blanc */
   padding: 10px 20px; /* Espacement intérieur du bouton */
-  margin-right: 10px; /* Marge droite entre les boutons */
+  margin-right: 30px; /* Marge droite entre les boutons */
   border: none; /* Supprimer la bordure */
   cursor: pointer; /* Curseur en forme de main au survol */
 }
@@ -404,4 +404,111 @@ main {
 .container p {
   font-size: 24px;
   font-weight: bold;
+}
+/*Engagement/*
+/* Styles pour la page d'engagements */
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+h1 {
+  color:rgb(85, 76, 76);
+  font-size: 36px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Media query pour une mise en page responsive */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+/*Responcive*/
+/* Media query pour la navbar responsive */
+@media screen and (max-width: 1280px) {
+  .nav-links {
+      position: absolute;
+      background-color: #333;
+      height: 100vh;
+      width: 100%;
+      top: 80px;
+      left: -100%;
+      transition: 0.5s;
+      z-index: 1;
+  }
+
+  .nav-links li {
+      display: block;
+      margin: 50px 0;
+      line-height: 40px;
+  }
+
+  .nav-links li a {
+      font-size: 1.5rem;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+  .menu-toggle {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      cursor: pointer;
+      z-index: 2;
+  }
+
+  .menu-hamburger {
+      width: 35px;
+      height: 35px;
+  }
+
+  .nav-links.mobile-menu {
+      left: 0;
+  }
+}
+/* Masquer le menu hamburger sur grand écran */
+@media screen and (min-width: 872px) {
+  .menu-hamburger {
+    display: none;
+  }
 }

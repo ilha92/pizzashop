@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;', 'root', '');
 
@@ -13,14 +13,24 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
     $pseudo = $_SESSION['pseudo'];
 
-    // Récupérer les informations de l'utilisateur depuis la base de données
-    $query = $bdd->prepare('SELECT * FROM users WHERE pseudo = :pseudo');
-    $query->execute(array('pseudo' => $pseudo));
-    $usersinfo = $query->fetch();
-} else {
-    // Rediriger vers la page de login si les informations de l'utilisateur ne sont pas disponibles
-    header("Location: ../acces/login.php");
-    exit();
+    // Récupérer les informations de l'email connecté
+    if (isset($_SESSION['email']) && !empty($_SESSION['email'])) {
+        $email = $_SESSION['email'];
+
+        // Récupérer les informations de l'utilisateur depuis la base de données
+        $query = $bdd->prepare('SELECT * FROM users WHERE pseudo = :pseudo');
+        $query->execute(array('pseudo' => $pseudo));
+        $usersinfo = $query->fetch();
+
+         // Récupérer les informations de l'email depuis la base de données
+         $query = $bdd->prepare('SELECT * FROM email WHERE email = :email');
+         $query->execute(array('email' => $email));
+         $emailinfo = $query->fetch();
+    } else {
+        // Rediriger vers la page de login si les informations de l'utilisateur ne sont pas disponibles
+        header("Location: ../acces/login.php");
+        exit();
+    }
 }
 
 if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
@@ -68,7 +78,7 @@ if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
 </header>
 <br>
 <h1>Bienvenue sur votre compte, <?php echo $pseudo; ?> !</h1>
-<br><br><br>
+<br><br>
 <?php
 if(!empty($usersinfo['avatar']))
 {
@@ -79,7 +89,9 @@ if(!empty($usersinfo['avatar']))
 ?>
 <!-- Afficher les informations de l'utilisateur -->
 <p>Nom d'utilisateur : <?php echo $pseudo; ?></p>
+<br>
 <!-- Ajouter d'autres informations de l'utilisateur ici -->
+<p>email : <?php echo $email; ?></p>
 <!-- Ajouter un lien de déconnexion -->
 <form method="post" action="" enctype="multipart/form-data">
     <label>Avatar :</label>

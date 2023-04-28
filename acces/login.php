@@ -74,9 +74,28 @@ if(isset($_POST['reset_password'])){
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Connexion</title>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>PizzaShop| Login</title>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("mdp");
+            var toggleBtn = document.getElementById("toggleBtn");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleBtn.innerHTML = "Cacher";
+            } else {
+                passwordInput.type = "password";
+                toggleBtn.innerHTML = "Afficher";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -94,10 +113,14 @@ if(isset($_POST['reset_password'])){
         <br><br>
         <label for="mdp">Mot de passe :</label>
         <input type="password" name="mdp" id="mdp" required>
+        <span class="toggle-btn" id="toggleBtn" onclick="togglePassword()"><i class="ri-eye-off-line"></i>Afficher</span>
         <br>
         <input type="submit" name="connexion" value="Se connecter">
-        <a href="reinitialisation.php">Mot de passe oublié ?</a> <!-- Lien pour réinitialiser le mot de passe -->
-        <a href="register.php">register ?</a> <!-- Lien pour réinitialiser le mot de passe -->
+        <div class="two">
+                <label><a href="reinitialisation.php">Forgot password?</a></label>
+                <label ><a href="register.php">register ?</a></label> <!-- Lien pour réinitialiser le mot de passe -->
+            </div>
+        
     </form>
 </body>
 </html>

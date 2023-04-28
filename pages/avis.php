@@ -29,6 +29,7 @@ if ($result !== false) {
     // Gérer l'erreur de requête ici
     die("Erreur de requête : " . print_r($stmt->errorInfo(), true));
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +79,7 @@ if (isset($_POST['submit'])) {
         echo '<div class=commentaire>"' . $commentaire . '"</div>';
         echo '<div class="options">';
         echo 'Auteur : ' . $pseudo;
-        echo '<a href="avis.php?action=supprimer&id=' . $id . '">Supprimer</a>'; // Utiliser l'ID de l'avis inséré dans le lien de suppression
+        echo '<a href="avis.php?action=supprimer&id=' . $id . '"><i class="ri-delete-bin-line"></i></a>'; // Utiliser l'ID de l'avis inséré dans le lien de suppression
         echo '</div>';
         echo '</div>';
         echo '</div>';
