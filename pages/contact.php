@@ -17,7 +17,9 @@ session_start();
 
     <main>
         <br><br>
-        <h1>Nous contacter</h1>
+        <form action="envoyer_message.php" method="post">
+             <h1>Nous contacter</h1>
+        <br>
         <p>Vous pouvez nous contacter via les coordonnées suivantes :</p>
         <ul>
             <li><i class="ri-mail-line"></i>Email : info@pizzashop.com</li>
@@ -25,6 +27,7 @@ session_start();
             <li><i class="ri-map-pin-line"></i>Adresse : 123 rue des Pizzas, 75001 Paris</li>
         </ul>
         <p>Ou en utilisant le formulaire de contact ci-dessous :</p>
+        <br>
         <form action="envoyer_message.php" method="post">
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>

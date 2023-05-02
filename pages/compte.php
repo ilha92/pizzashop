@@ -83,16 +83,19 @@ if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
 if(!empty($usersinfo['avatar']))
 {
 ?>
-<img src="../acces/users/avatars/<?php echo $usersinfo['avatar'] ?>" width="150" />
+<form method="post" action="" enctype="multipart/form-data">
+    <img src="../acces/users/avatars/<?php echo $usersinfo['avatar'] ?>" width="150" />
 <?php
 }
 ?>
 <!-- Afficher les informations de l'utilisateur -->
-<p>Nom d'utilisateur : <?php echo $pseudo; ?></p>
+<form method="post" action="" enctype="multipart/form-data">
+    <p>Nom d'utilisateur : <?php echo $pseudo; ?></p>
 <br>
 <!-- Ajouter d'autres informations de l'utilisateur ici -->
 <p>email : <?php echo $email; ?></p>
 <!-- Ajouter un lien de déconnexion -->
+<br>
 <form method="post" action="" enctype="multipart/form-data">
     <label>Avatar :</label>
     <input type="file" name="avatar">

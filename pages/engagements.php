@@ -13,7 +13,7 @@ session_start();
         <?php require_once('../header/navbar.php'); ?>
     </header>
     <main>
-        <br><br><br>
+        <br><br>
         <h2>Engagements</h2>
         <br>
         <p>Nos engagements :</p>

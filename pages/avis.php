@@ -127,14 +127,19 @@ if (isset($_POST['submit'])) {
         }
     }
    // Parcourir les avis et les afficher
-foreach ($avis as $avisItem) {
+   foreach ($avis as $a) {
     echo '<div class="avis-container">';
-    echo '<div class=note>Note : ' . $avisItem['note'] . ' étoiles</div>';
-    echo '<div class=commentaire>"' . $avisItem['commentaire'] . '"</div>';
+    echo '<div class="note">Note : ' . $a['note'] . ' étoiles</div>';
+    echo '<div class="commentaire">"' . $a['commentaire'] . '"</div>';
+    echo '<div class="options">';
+    echo 'Auteur : ' . $a['pseudo'];
     echo '<form method="post" action="">';
-    echo '<input type="hidden" name="avis_id" value="'.$avisItem['id'].'">';
-    echo '<button type="submit" name="like" class="like-button">Like</button>';
+    echo '<input type="hidden" name="avis_id" value="' . $a['id'] . '">';
+    echo '<button type="submit" name="like"><i class="ri-heart-line"></i></button>';
+    echo '<span>' . $a['likes'] . ' likes</span>';
     echo '</form>';
+    echo '<a href="avis.php?action=supprimer&id=' . $a['id'] . '"><i class="ri-delete-bin-line"></i></a>';
+    echo '</div>';
     echo '</div>';
 }
     ?>

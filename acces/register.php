@@ -65,7 +65,7 @@ if(isset($_POST['valider'])){
             <br>
             <div class="password-toggle">
                 <input type="password" name="mdp" id="mdp" autocomplete="off" placeholder="Mot de passe">
-                <span class="toggle-btn" id="toggleBtn" onclick="togglePassword()"><i class="ri-eye-off-line"></i>Afficher</span>
+                <span class="toggle-btn" id="toggleBtn" onclick="togglePassword()"><i class="ri-eye-off-line"></i></span>
             </div>
             <br/><br/>
             <input type="submit" name="valider" value="Valider">
