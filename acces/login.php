@@ -103,6 +103,7 @@ if(isset($_POST['reset_password'])){
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
      </header>
+     <br>
     <h1>Connexion</h1>
     <form method="POST" action="">
         <label for="pseudo">Pseudo :</label>

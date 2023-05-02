@@ -173,7 +173,6 @@ session_start();
             </li>
     </ul>
 </div>
-<br>
 <div id="vegan" class="pizza">
     <h2>Gourmandes Veggies</h2>
     <ul>

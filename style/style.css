@@ -1,4 +1,6 @@
 /* Réinitialiser les styles par défaut du navigateur */
+/*Responcive*/
+/* Media query pour la navbar responsive */
 body, figure, h1, h2, h3, p, img, ul, ol, li {
   margin: 0;
   padding: 0;
@@ -366,8 +368,11 @@ th {
 #btnCommander:hover {
   background-color: #388e3c;
 }
-/*index*/
 
+/*index*/
+/*Responcive*/
+/* Media query pour la navbar responsive */
+@media screen and (max-width: 1280px) {
 /* Mise en page du contenu principal */
 main {
   padding: 20px;
@@ -405,8 +410,12 @@ main {
   font-size: 24px;
   font-weight: bold;
 }
+}
 /*Engagement/*
 /* Styles pour la page d'engagements */
+/*Responcive*/
+/* Media query pour la navbar responsive */
+@media screen and (max-width: 1280px) {
 body {
   font-family: Arial, sans-serif;
 }
@@ -443,7 +452,7 @@ p {
   font-size: 18px;
   line-height: 1.4;
 }
-
+}
 /* Media query pour une mise en page responsive */
 @media screen and (max-width: 768px) {
   h1 {

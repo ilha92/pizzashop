@@ -111,16 +111,32 @@ if (isset($_POST['submit'])) {
     <h2>Avis des utilisateurs</h2>
    
     <?php
-    // Parcourir les avis et les afficher
-    foreach ($avis as $avisItem) {
-        echo '<div class="avis-container">';
-        echo '<div class=note>Note : ' . $avisItem['note'] . ' étoiles</div>';
-        echo '<div class=commentaire>"' . $avisItem['commentaire'] . '"</div>';
-        echo '<div class="options">';
-        echo 'Auteur : ' . $avisItem['pseudo'];
-        echo '</div>';
-        echo '</div>';
+    if (isset($_POST['like']) && isset($_POST['avis_id'])) {
+        $avis_id = $_POST['avis_id'];
+        // Mettre à jour la base de données pour incrémenter le nombre de likes pour cet avis
+        $query = "UPDATE avis SET likes = likes + 1 WHERE id = :id";
+        $stmt = $bdd->prepare($query);
+        $stmt->bindValue(':id', $avis_id, PDO::PARAM_INT);
+        $result = $stmt->execute();
+        if ($result !== false) {
+            // Afficher un message de confirmation
+            echo 'Avis liké avec succès';
+        } else {
+            // Gérer l'erreur de mise à jour ici
+            die("Erreur de mise à jour : " . print_r($stmt->errorInfo(), true));
+        }
     }
+   // Parcourir les avis et les afficher
+foreach ($avis as $avisItem) {
+    echo '<div class="avis-container">';
+    echo '<div class=note>Note : ' . $avisItem['note'] . ' étoiles</div>';
+    echo '<div class=commentaire>"' . $avisItem['commentaire'] . '"</div>';
+    echo '<form method="post" action="">';
+    echo '<input type="hidden" name="avis_id" value="'.$avisItem['id'].'">';
+    echo '<button type="submit" name="like" class="like-button">Like</button>';
+    echo '</form>';
+    echo '</div>';
+}
     ?>
 </body>
 </html>
