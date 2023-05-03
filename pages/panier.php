@@ -77,6 +77,7 @@
                 $total = 0;
         ?>
         <table>
+            <br>
             <tr>
                 <th>Produit</th>
                 <th>Prix</th>

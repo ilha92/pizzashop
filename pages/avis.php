@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
         // Afficher le message d'avis soumis
         echo '<h2>Avis soumis :</h2>';
         echo '<div class="avis-container">';
-        echo '<div class="note">Note : ' . $note . ' étoiles</div>';
+        echo '<div class="note">Note : ' . $note . ' <i class="ri-star-line"></i></div>';
         echo '<div class=commentaire>"' . $commentaire . '"</div>';
         echo '<div class="options">';
         echo 'Auteur : ' . $pseudo;

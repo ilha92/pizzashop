@@ -15,7 +15,7 @@ body {
 /* Appliquer un arrière-plan et une couleur de texte pour le header */
 header {
   background-color:rgb(14, 14, 11);
-  color: wheat;
+  color: rgb(235, 235, 235);
   padding: 10px;
 }
 
@@ -174,7 +174,7 @@ form input[type="submit"]:hover {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+  background-color: rgb(236, 236, 231);
 }
 
 form {
