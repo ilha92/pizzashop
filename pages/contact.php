@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,10 +13,11 @@ session_start();
 
     <main>
         <br><br>
-        <form action="envoyer_message.php" method="post">
+        <form action="" method="post">
              <h1>Nous contacter</h1>
         <br>
-        <p>Vous pouvez nous contacter via les coordonnées suivantes :</p>
+        <form action="" method="post">
+             <p>Vous pouvez nous contacter via les coordonnées suivantes :</p>
         <ul>
             <li><i class="ri-mail-line"></i>Email : info@pizzashop.com</li>
             <li><i class="ri-phone-line"></i>Téléphone : +33 123 456 789</li>
@@ -28,20 +25,62 @@ session_start();
         </ul>
         <p>Ou en utilisant le formulaire de contact ci-dessous :</p>
         <br>
-        <form action="envoyer_message.php" method="post">
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
+        <form action="" method="post">
+            <label for="pseudo">Nom :</label>
+            <input type="text" id="pseudo" name="pseudo" required>
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" required>
             <label for="message">Message :</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-            <input type="submit" value="Envoyer">
+            <input type="submit" name="submit" value="Envoyer">
         </form>
     </main>
+</body>
+</html>
+<?php
+session_start();
+$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;', 'root', '');
 
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    // Rediriger vers la page de login si l'utilisateur n'est pas connecté
+    header("Location: ../acces/login.php");
+    exit();
+}
+
+// Récupérer les informations de l'utilisateur connecté
+if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
+    $pseudo = $_SESSION['pseudo'];
+} else {
+    // Rediriger vers la page de login si les informations de l'utilisateur ne sont pas disponibles
+    header("Location: ../acces/login.php");
+    exit();
+}
+
+// Vérifier si le formulaire a été soumis
+if (isset($_POST['submit'])) {
+    // Récupérer les données soumises dans le formulaire
+    $pseudo = $_POST['pseudo'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    // Insertion des données dans la table "contacts"
+    $query = "INSERT INTO contacts (pseudo, email, message) VALUES (:pseudo, :email, :message)";
+    $stmt = $bdd->prepare($query);
+    $stmt->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->bindValue(':message', $message, PDO::PARAM_STR);
+    $result = $stmt->execute();
+
+    // Vérifier si l'insertion a réussi
+    if ($result !== false) {
+        echo "Message envoyé avec succès !";
+    } else {
+        // Gérer l'erreur d'insertion ici
+        die("Erreur d'insertion : " . print_r($stmt->errorInfo(), true));
+    }
+}
+?>
     <footer>
         <p>© Pizza Shop. Tous droits réservés.</p>
     </footer>
-
-</body>
-</html>
