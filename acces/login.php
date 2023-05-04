@@ -81,11 +81,10 @@ if(isset($_POST['reset_password'])){
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <title>PizzaShop| Login</title>
-
     <script>
-        function togglePassword() {
-            var passwordInput = document.getElementById("mdp");
-            var toggleBtn = document.getElementById("toggleBtn");
+        function togglePassword(inputId, btnId) {
+            var passwordInput = document.getElementById(inputId);
+            var toggleBtn = document.getElementById(btnId);
 
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
@@ -104,7 +103,9 @@ if(isset($_POST['reset_password'])){
         <?php require_once('../header/navbar.php'); ?>
      </header>
      <br>
+     <form method="POST" action="">
     <h1>Connexion</h1>
+    <br>
     <form method="POST" action="">
         <label for="pseudo">Pseudo :</label>
         <input type="text" name="pseudo" id="pseudo" required>
@@ -112,9 +113,11 @@ if(isset($_POST['reset_password'])){
         <label for="email">E-mail :</label>
         <input type="email" name="email" id="email" required>
         <br><br>
+        <div class="password-toggle">
         <label for="mdp">Mot de passe :</label>
         <input type="password" name="mdp" id="mdp" required>
-        <span class="toggle-btn" id="toggleBtn" onclick="togglePassword()"><i class="ri-eye-off-line"></i>Afficher</span>
+        <span class="toggle-btn"><i class="ri-eye-off-line" id="toggle-btn1" onclick="togglePassword('mdp', 'toggle-btn1')"></i></span>
+        </div>
         <br>
         <input type="submit" name="connexion" value="Se connecter">
         <div class="two">

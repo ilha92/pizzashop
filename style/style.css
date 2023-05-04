@@ -23,23 +23,27 @@ header {
 nav {
   background-color: #000; /* Couleur de fond de la navbar */
   overflow: hidden; /* Pour gérer les éléments qui débordent de la navbar */
+  display: inline-block;
 }
 
 /* Style pour les liens de la navbar */
 nav ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  display: inline-block;
 }
 
 nav li {
-  float: left; /* Pour aligner les liens à gauche */
+  display: inline-block;
+  margin-right: 20px;
 }
 
 nav a {
   display: block; /* Pour que les liens prennent toute la largeur de la navbar */
   color: #fff; /* Couleur du texte des liens */
   text-align: center; /* Pour centrer le texte dans les liens */
+  margin: 14px 14px;
   padding: 14px 20px; /* Espacement du texte par rapport aux bords de la navbar */
   text-decoration: none; /* Pour enlever la décoration par défaut des liens */
   transition: color 0.3s; /* Animation de transition pour la couleur du texte */
@@ -66,6 +70,7 @@ nav a:hover {
 button {
   background-color: rgb(34, 16, 16); /* Couleur de fond bleue */
   color: #fff; /* Couleur du texte en blanc */
+  margin: 30px;
   padding: 10px 20px; /* Espacement intérieur du bouton */
   margin-right: 30px; /* Marge droite entre les boutons */
   border: none; /* Supprimer la bordure */
@@ -521,3 +526,4 @@ p {
     display: none;
   }
 }
+/*index*/
