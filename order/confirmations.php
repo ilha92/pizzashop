@@ -1,3 +1,14 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <script>
 // Récupérer le montant total de la commande depuis l'URL
 var total = parseFloat(getParameterByName('total'));
 
@@ -32,4 +43,16 @@ function getParameterByName(name, url) {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
+}</script>
+</head>
+<body>
+     <header>
+        <h1>Pizza Shop</h1>
+        <?php require_once('../header/navbar.php'); ?>
+        <?php require_once('../footer.php'); ?>
+    </header>
+    <br>
+    <h1>Merci pour votre commande</h1>
+    <h4>Revenez nous voir</h4>
+</body>
+</html>

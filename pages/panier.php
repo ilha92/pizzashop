@@ -1,37 +1,45 @@
 <?php
-    // Démarrer la session
-    session_start();
+// Démarrer la session
+session_start();
 
-    // Vérifier si un produit a été ajouté au panier
-    if(isset($_POST['commander']) && $_POST['commander'] == 1) {
-        $produit = $_POST['produit'];
-        $prix = $_POST['prix'];
+// Vérifier si un produit a été ajouté au panier
+if (isset($_POST['commander']) && $_POST['commander'] == 1) {
+    $produit = $_POST['produit'];
+    $prix = $_POST['prix'];
+    $quantite = isset($_POST['quantite']) ? $_POST['quantite'] : 1; // Définir la quantité par défaut à 1
 
-        // Ajouter le produit au panier
-        $_SESSION['panier'][] = array(
-            'produit' => $produit,
-            'prix' => $prix
-        );
-
-        // Envoyer une réponse de succès à la requête Ajax
-        echo "success";
-        exit;
+    // Vérifier si le prix est un nombre
+    if (!is_numeric($prix)) {
+        // Gérer l'erreur ou définir une valeur par défaut
+        $prix = 0;
     }
 
-    // Vérifier si un produit a été supprimé du panier
-    if(isset($_POST['supprimer'])) {
-        $index = $_POST['index'];
+    // Ajouter le produit au panier
+    $_SESSION['panier'][] = array(
+        'produit' => $produit,
+        'prix' => $prix,
+        'quantite' => $quantite
+    );
 
-        // Supprimer le produit du panier
-        unset($_SESSION['panier'][$index]);
+    // Envoyer une réponse de succès à la requête Ajax
+    echo "success";
+    exit;
+}
 
-        // Réorganiser les index du panier
-        $_SESSION['panier'] = array_values($_SESSION['panier']);
+// Vérifier si un produit a été supprimé du panier
+if (isset($_POST['supprimer'])) {
+    $index = $_POST['index'];
 
-        // Envoyer une réponse de succès à la requête Ajax
-        echo "success";
-        exit;
-    }
+    // Supprimer le produit du panier
+    unset($_SESSION['panier'][$index]);
+
+    // Réorganiser les index du panier
+    $_SESSION['panier'] = array_values($_SESSION['panier']);
+
+    // Envoyer une réponse de succès à la requête Ajax
+    echo "success";
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -64,81 +72,87 @@
     </script>
 </head>
 <body>
-
     <header>
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
+        <?php require_once('../footer.php'); ?>
     </header>
     <main>
         <br><br>
         <h2>Panier</h2>
         <?php
-            if(isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
-                $total = 0;
-        ?>
-        <table>
-            <br>
-            <tr>
-                <th>Produit</th>
-                <th>Prix</th>
-                <th>Action</th>
-            </tr>
-            <?php
-                foreach($_SESSION['panier'] as $index => $produit) {
-                    $total += $produit['prix'];
+        if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
+            $total = 0;
+            ?>
+            <table>
+                <br>
+                <tr>
+                    <th>Produit</th>
+                    <th>Prix unitaire</th>
+                    <th>Quantité</th>
+                    <th>Prix total</th>
+                    <th>Action</th>
+                    </tr>
+                <?php
+                foreach ($_SESSION['panier'] as $index => $produit) {
+                    $prixTotalProduit = $produit['prix'];
+
+                    // Vérifier si le prix est un nombre
+                    if (is_numeric($prixTotalProduit)) {
+                        $total += $prixTotalProduit;
+                    }
+
                     ?>
                     <tr>
                         <td><?php echo $produit['produit']; ?></td>
                         <td><?php echo $produit['prix']; ?> €</td>
+                        <td><?php echo $produit['quantite']; ?></td>
+                        <td><?php echo $prixTotalProduit; ?> €</td>
                         <td><button class="supprimer" data-index="<?php echo $index; ?>">Supprimer</button></td>
                     </tr>
-                    <?php
+                <?php } ?>
+                <tr>
+                    <td colspan="5" align="right"><strong>Total :</strong> <?php echo $total; ?> €</td>
+                </tr>
+            </table>
+            <form action="../order/valider_commande.php" method="post">
+                <input type="hidden" name="total" value="<?php echo $total; ?>">
+                <?php foreach ($_SESSION['panier'] as $index => $produit) { ?>
+                    <input type="hidden" name="produit[]" value="<?php echo $produit['produit']; ?>">
+                    <input type="hidden" name="prix[]" value="<?php echo $produit['prix']; ?>">
+                    <br>
+                <?php } ?>
+                <!-- Bouton de confirmation de commande -->
+                <button id="btnCommander">Confirmer la commande</button>
+            </form>
+
+            <!-- Lien JavaScript pour charger le fichier confirmation.js -->
+            <script src="../order/confirmation.js"></script>
+
+            <!-- Code JavaScript pour le bouton de confirmation de commande -->
+            <script>
+                document.getElementById("btnCommander").addEventListener("click", function() {
+                    // Appeler la fonction de confirmation de commande
+                    confirmerCommande();
+                });
+
+                function confirmerCommande() {
+                    // Effectuer les étapes nécessaires pour confirmer la commande,
+                    // Envoyer les données du panier au serveur pour traitement
+                    // ...
+
+                    // Rediriger vers la page de validation de commande
+                    window.location.href = "../order/valider_commande.php";
                 }
-            ?>
-            <tr>
-                <td colspan="3" align="right"><strong>Total :</strong> <?php echo $total; ?> €</td>
-            </tr>
-        </table>
-        <form action="../order/valider_commande.php" method="post">
-            <input type="hidden" name="total" value="<?php echo $total; ?>">
-
-          <!-- Bouton de confirmation de commande -->
-         <button id="btnCommander">Confirmer la commande</button>
-
-         <!-- Lien JavaScript pour charger le fichier confirmation.js -->
-         <script src="../order/confirmation.js"></script>
-
-         <!-- Code JavaScript pour le bouton de confirmation de commande -->
-         <script>
-          document.getElementById("btnCommander").addEventListener("click", function() {
-          // Appeler la fonction de confirmation de commande
-          confirmerCommande();
-          });
-
-          function confirmerCommande() {
-          // Effectuer les étapes nécessaires pour confirmer la commande, par exemple :
-  
-          // Envoyer les données du panier au serveur pour traitement
-          // ...
-  
-          // Rediriger vers la page de validation de commande
-          window.location.href = "../order/valider_commande.php";
-          }
-        
-         </script>
-
-</body>
-</form>
-<?php
-         } else {
-             echo "<p>Votre panier est vide.</p>";
-         }
-     ?>
-</main>
-<br><br><br><br><br><br><br>
-<footer>
-<p>© Pizza Shop. Tous droits réservés.</p>
-</footer>
-
+            </script>
+        <?php } else {
+            echo "<p>Votre panier est vide.</p>";
+        } ?>
+    </main>
+    <div class="centered">
+        <h5>Pour votre santé, évitez de manger trop gras, trop sucré, trop salé</h5>
+        <h5>Pour votre santé, évitez de grignoter entre les repas</h5>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

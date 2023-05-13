@@ -21,6 +21,10 @@ header {
 
 /* Style de base pour la navbar */
 nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   background-color: #000; /* Couleur de fond de la navbar */
   overflow: hidden; /* Pour gérer les éléments qui débordent de la navbar */
   display: inline-block;
@@ -43,8 +47,8 @@ nav a {
   display: block; /* Pour que les liens prennent toute la largeur de la navbar */
   color: #fff; /* Couleur du texte des liens */
   text-align: center; /* Pour centrer le texte dans les liens */
-  margin: 14px 14px;
-  padding: 14px 20px; /* Espacement du texte par rapport aux bords de la navbar */
+  margin: 10px 8px;
+  padding: 12px 15px; /* Espacement du texte par rapport aux bords de la navbar */
   text-decoration: none; /* Pour enlever la décoration par défaut des liens */
   transition: color 0.3s; /* Animation de transition pour la couleur du texte */
 }
@@ -286,6 +290,21 @@ input[type="submit"] {
   background-color: #f5f5f5;
 }
 
+   /*avatars*/
+   .avatar-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 .avatar-input {
   margin-bottom: 20px;
 }
@@ -526,4 +545,140 @@ p {
     display: none;
   }
 }
-/*index*/
+/*footer*/
+#site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+#site-footer.hidden {
+  transform: translateY(100%);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex-basis: calc(20% - 20px);
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Défilement vers le haut */
+.transparent-footer {
+  background-color: transparent;
+}
+/*Nutriscore*/
+main {
+  margin: 20px;
+}
+
+.nutriscore-section {
+  margin-bottom: 30px;
+}
+
+.nutriscore-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.nutriscore-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.nutriscore-section img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.nutriscore-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.nutriscore-section ul li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/*santer*/
+ .centered {
+            text-align: center;
+        }
+
+        .en-savoir-plus {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #f00;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+        }
+        .upload-button {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background-color: #bababa;
+          color: #FFFFFF;
+          border: none;
+          padding: 5px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .upload-button i {
+          font-size: 26px;
+        }

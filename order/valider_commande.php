@@ -32,6 +32,7 @@
     <header>
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
+        <?php require_once('../footer.php'); ?>
     </header>
     <br>
     <main>
@@ -72,9 +73,6 @@
          }
      ?>
 </main>
-<footer>
-<p>© Pizza Shop. Tous droits réservés.</p>
-</footer>
-
+<br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

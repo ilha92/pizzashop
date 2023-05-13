@@ -1,5 +1,66 @@
-<?php 
+<?php
 session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>PizzaShop| Login</title>
+    <script>
+        function togglePassword(inputId, btnId) {
+            var passwordInput = document.getElementById(inputId);
+            var toggleBtn = document.getElementById(btnId);
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleBtn.innerHTML = "Cacher";
+            } else {
+                passwordInput.type = "password";
+                toggleBtn.innerHTML = "Afficher";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Pizza Shop</h1>
+        <?php require_once('../header/navbar.php'); ?>
+     </header>
+     <br>
+     <form method="POST" action="">
+    <h1>Connexion</h1>
+    <br>
+    <form method="POST" action="">
+        <label for="pseudo">Pseudo :</label>
+        <input type="text" name="pseudo" id="pseudo" required>
+        <br>
+        <label for="email">E-mail :</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+        <div class="password-toggle">
+        <label for="mdp">Mot de passe :</label>
+        <input type="password" name="mdp" id="mdp" required>
+        <span class="toggle-btn"><i class="ri-eye-off-line" id="toggle-btn1" onclick="togglePassword('mdp', 'toggle-btn1')"></i></span>
+        </div>
+        <br>
+        <input type="submit" name="connexion" value="Se connecter">
+        <br> 
+        <div class="two">
+                <label><a href="reinitialisation.php">Forgot password?</a></label>
+                <label ><a href="register.php">register ?</a></label> <!-- Lien pour réinitialiser le mot de passe -->
+            </div>
+        
+    </form>
+
+
+<?php 
 $bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;','root', '');
 
 // Vérifier si l'utilisateur est déjà connecté
@@ -70,61 +131,5 @@ if(isset($_POST['reset_password'])){
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../style/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <title>PizzaShop| Login</title>
-    <script>
-        function togglePassword(inputId, btnId) {
-            var passwordInput = document.getElementById(inputId);
-            var toggleBtn = document.getElementById(btnId);
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                toggleBtn.innerHTML = "Cacher";
-            } else {
-                passwordInput.type = "password";
-                toggleBtn.innerHTML = "Afficher";
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <header>
-        <h1>Pizza Shop</h1>
-        <?php require_once('../header/navbar.php'); ?>
-     </header>
-     <br>
-     <form method="POST" action="">
-    <h1>Connexion</h1>
-    <br>
-    <form method="POST" action="">
-        <label for="pseudo">Pseudo :</label>
-        <input type="text" name="pseudo" id="pseudo" required>
-        <br>
-        <label for="email">E-mail :</label>
-        <input type="email" name="email" id="email" required>
-        <br><br>
-        <div class="password-toggle">
-        <label for="mdp">Mot de passe :</label>
-        <input type="password" name="mdp" id="mdp" required>
-        <span class="toggle-btn"><i class="ri-eye-off-line" id="toggle-btn1" onclick="togglePassword('mdp', 'toggle-btn1')"></i></span>
-        </div>
-        <br>
-        <input type="submit" name="connexion" value="Se connecter">
-        <div class="two">
-                <label><a href="reinitialisation.php">Forgot password?</a></label>
-                <label ><a href="register.php">register ?</a></label> <!-- Lien pour réinitialiser le mot de passe -->
-            </div>
-        
-    </form>
 </body>
 </html>

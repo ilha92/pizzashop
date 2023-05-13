@@ -38,11 +38,13 @@ session_start();
     <header>
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
+        <?php require_once('../footer.php'); ?>
     </header>
     <br><br>
    
         <h2>Les Promos du Jour</h2>
         <!-- Afficher les produits en promotion ici -->
+        <div id="classique" class="pizza">
      <ul>
             <li>
                 <h3>Pizza Margherita</h3>
@@ -84,9 +86,11 @@ session_start();
          </li>
             <!-- Ajouter d'autres articles en promotion ici -->
     </ul>
-    <br><br><br><br>
-    <footer>
-        <p>© 2023 Pizza Shop. Tous droits réservés.</p>
-    </footer>
+    <div>
+    <div class="centered">
+        <h5>Pour votre santé, évitez de manger trop gras, trop sucré, trop salé</h5>
+        <h5>Pour votre santé, évitez de grignoter entre les repas</h5>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

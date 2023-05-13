@@ -8,7 +8,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     header("Location: ../acces/login.php");
     exit();
 }
-
 // Récupérer les informations de l'utilisateur connecté
 if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
     $pseudo = $_SESSION['pseudo'];
@@ -32,37 +31,6 @@ if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
         exit();
     }
 }
-
-if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
-{
-    $taillemax = 2097152;
-    $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
-    if($_FILES['avatar']['size'] <= $taillemax )
-    {
-        $extensionsUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
-        if(in_array($extensionsUpload, $extensionsValides))
-        {
-            $chemin = "../acces/users/avatars/".$_SESSION['id'].".".$extensionsUpload;
-            $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
-            if($resultat)
-            {
-                $updateavatar = $bdd->prepare('UPDATE users SET avatar = :avatar WHERE id = :id');
-                $updateavatar->execute(array('avatar' => $_SESSION['id'].".".$extensionsUpload,'id' => $_SESSION['id']));
-            }
-            else{
-                echo "Erreur durant l'importation de votre profil";
-            }
-        }
-        else
-        {
-            echo "Extension de fichier non valide jpg, jpeg, gif, png";
-        }
-    }
-    else
-    {
-        echo "Fichier trop volumineux";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -76,33 +44,67 @@ if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
     <h1>Pizza Shop</h1>
     <?php require_once('../header/navbar.php'); ?>
 </header>
-<br>
-<h1>Bienvenue sur votre compte, <?php echo $pseudo; ?> !</h1>
-<br><br>
 <?php
 if(!empty($usersinfo['avatar']))
 {
 ?>
 <form method="post" action="" enctype="multipart/form-data">
-    <img src="../acces/users/avatars/<?php echo $usersinfo['avatar'] ?>" width="150" />
+<h4>Bienvenue sur votre compte, <?php echo $pseudo; ?> !</h4>
+<br>
+<div class="avatar-container">
+    <img src="../acces/users/avatars/<?php echo $usersinfo['avatar'] ?>" alt="Avatar">
+    <label for="avatar" class="upload-button"><i class="ri-file-edit-line"></i></label>
+    <input type="file" name="avatar" id="avatar">
+</div>
+    <br>
 <?php
 }
 ?>
 <!-- Afficher les informations de l'utilisateur -->
 <form method="post" action="" enctype="multipart/form-data">
-    <p>Nom d'utilisateur : <?php echo $pseudo; ?></p>
-<br>
+<p>Nom d'utilisateur : <?php echo $pseudo; ?><a href="../pages/profile.php"><i class="ri-pencil-line"></i></a>
+<br><br>
 <!-- Ajouter d'autres informations de l'utilisateur ici -->
 <p>email : <?php echo $email; ?></p>
 <!-- Ajouter un lien de déconnexion -->
 <br>
 <form method="post" action="" enctype="multipart/form-data">
-    <label>Avatar :</label>
-    <input type="file" name="avatar">
-    <br>
     <input type="submit" value="Mettre à jour mon image">
     <br><br>
     <input type="submit" name="deconnexion" value="Déconnexion">
+    
+    <?php 
+    if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
+    {
+        $taillemax = 2097152;
+        $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
+        if($_FILES['avatar']['size'] <= $taillemax )
+        {
+            $extensionsUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
+            if(in_array($extensionsUpload, $extensionsValides))
+            {
+                $chemin = "../acces/users/avatars/".$_SESSION['id'].".".$extensionsUpload;
+                $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
+                if($resultat)
+                {
+                    $updateavatar = $bdd->prepare('UPDATE users SET avatar = :avatar WHERE id = :id');
+                    $updateavatar->execute(array('avatar' => $_SESSION['id'].".".$extensionsUpload,'id' => $_SESSION['id']));
+                }
+                else{
+                    echo "Erreur durant l'importation de votre profil";
+                }
+            }
+            else
+            {
+                echo "Extension de fichier non valide jpg, jpeg, gif, png";
+            }
+        }
+        else
+        {
+            echo "Fichier trop volumineux";
+        }
+    }
+    ?>
 </form>
     <?php
     // Traitement du formulaire de déconnexion

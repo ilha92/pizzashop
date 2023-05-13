@@ -11,7 +11,7 @@
     <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
-<body>
+<body class="centered">
 <header>
     <nav>
         <div class="logo">

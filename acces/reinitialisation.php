@@ -1,3 +1,7 @@
+<?php
+session_start();
+$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;','root', '');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +29,7 @@
 <header>
     <h1>Pizza Shop</h1>
     <?php require_once('../header/navbar.php'); ?>
+    <?php require_once('../footer.php'); ?>
 </header>
 <br>
 <form method="POST" action="">
@@ -48,11 +53,7 @@
     <br>
     <input type="submit" name="reset_password" value="Réinitialiser le mot de passe">
 </form>
-
 <?php
-session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;','root', '');
-
 // Traitement du formulaire de réinitialisation de mot de passe
 if(isset($_POST['reset_password'])){
     if(!empty($_POST['email']) && !empty($_POST['new_password']) && !empty($_POST['confirm_password'])){
@@ -91,4 +92,6 @@ if(isset($_POST['reset_password'])){
         echo "Veuillez remplir tous les champs.";
     }
 }
-?>
+ ?>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>   
+</body>

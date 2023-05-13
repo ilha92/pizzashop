@@ -29,7 +29,7 @@ if(isset($_POST['valider'])){
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['mdp'] = $mdp;
             $_SESSION['id'] = $recupUser->fetch()['id'];
-            header("Location: ../index.php");
+            header("Location: ../acces/login.php");
             exit();
         } else { 
             $error = "Une erreur s'est produite, veuillez réessayer ultérieurement";
@@ -117,7 +117,7 @@ if (isset($_POST['valider'])) {
             }
 
             // le Redirige vers la page d'accueil
-            header("Location: ../index.php");
+            header("Location: ../acces/login.php");
             exit();
         } else {
             $error = "Le mot de passe doit avoir au moins 8 caractères avec une majuscule et un caractère spécial (!@#$&*)";

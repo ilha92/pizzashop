@@ -42,11 +42,13 @@ if ($result !== false) {
     <header>
         <h1>Pizza Shop</h1>
         <?php require_once('../header/navbar.php'); ?>
+        <?php require_once('../footer.php'); ?>
      </header>
      <br>
     <!-- Formulaire d'avis -->
-    <h2>Donner votre avis</h2>
-   
+    <form method="post" action="">
+    <h2>Donner votre avis :</h2>
+    <br>
     <form method="post" action="">
         <label for="note">Note :</label>
         <input type="number" name="note" id="note" min="1" max="5" required>
@@ -143,5 +145,6 @@ if (isset($_POST['submit'])) {
     echo '</div>';
 }
     ?>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
