@@ -58,8 +58,6 @@ session_start();
             </div>
         
     </form>
-
-
 <?php 
 $bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;','root', '');
 

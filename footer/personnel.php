@@ -6,11 +6,15 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title>Aperçu de comment nous traitons vos données</title>
-  <?php require_once('../header/navbar.php'); ?>
-  <?php require_once('../footer.php'); ?>
 </head>
 <br>
 <body>
+<header>
+     <h1 style="display: flex; align-items: center;">
+    <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza</h1>
+     <?php include_once '../header/navbar.php'; ?>
+        <?php require_once('../footer.php'); ?>
+ </header>
   <h1>Aperçu de comment nous traitons vos données</h1>
   <br>
   <p>Cette notice décrit la manière dont PIZZASHOP (ci-après « PizzaShop » ou « nous ») utilise, protège et partage les données à caractère personnel des clients collectées par PizzaShop via les sites web et applications mobiles gérés par PizzaShop (ci-après « les services en ligne »)</p>

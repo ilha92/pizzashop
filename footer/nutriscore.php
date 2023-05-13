@@ -22,14 +22,14 @@ h1, p {
   margin: 10px;
 }
   </style>
-  <?php require_once('../header/navbar.php'); ?>
-  <?php require_once('../footer.php'); ?>
 </head>
 <body>
-  <header>
-    <h1>Nutri-Score chez PizzaShop</h1>
-    <?php include_once '../header/navbar.php'; ?>
-  </header>
+<header>
+     <h1 style="display: flex; align-items: center;">
+    <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza</h1>
+     <?php include_once '../header/navbar.php'; ?>
+        <?php require_once('../footer.php'); ?>
+ </header>
   <br><br>
   <main>
     <section class="nutriscore-section">

@@ -35,11 +35,12 @@ session_start();
     </script>
 </head>
 <body>
-    <header>
-        <h1>Pizza Shop</h1>
-        <?php require_once('../header/navbar.php'); ?>
+<header>
+     <h1 style="display: flex; align-items: center;">
+     <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza</h1>
+     <?php include_once '../header/navbar.php'; ?>
         <?php require_once('../footer.php'); ?>
-    </header>
+     </header>
     <br><br>
    
         <h2>Les Promos du Jour</h2>

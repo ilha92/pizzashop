@@ -10,7 +10,7 @@
     </header>
     <main>
         <br>
-        <h2>Bienvenue sur Pizza Shop</h2>
+        <h2>Bienvenue sur Cestino Pizza</h2>
         <br>
         <p>Découvrez nos délicieuses pizzas faites maison avec des ingrédients frais et de qualité. 
         <br> <br>   

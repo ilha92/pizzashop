@@ -25,7 +25,7 @@ nav {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: #000; /* Couleur de fond de la navbar */
+  background-color: #3392df51; /* Couleur de fond de la navbar */
   overflow: hidden; /* Pour gérer les éléments qui débordent de la navbar */
   display: inline-block;
 }
@@ -501,7 +501,7 @@ p {
   .nav-links {
       position: absolute;
       background-color: #333;
-      height: 100vh;
+      height: 160vh;
       width: 100%;
       top: 80px;
       left: -100%;
@@ -546,6 +546,7 @@ p {
   }
 }
 /*footer*/
+/* Styles généraux du footer */
 #site-footer {
   position: fixed;
   bottom: 0;
@@ -595,6 +596,7 @@ p {
 .transparent-footer {
   background-color: transparent;
 }
+
 /*Nutriscore*/
 main {
   margin: 20px;

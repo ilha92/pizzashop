@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PizzaShop-recettes-pizzas</title>
+  <title>Cestino Pizza-recettes-pizzas</title>
     <style>
     body {
       text-align: center;
@@ -21,6 +21,8 @@
 </head>
 <body>
   <header> 
+  <h1 style="display: flex; align-items: center;">
+    <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza</h1>
     <h1>Recettes-pizzas</h1>
     <?php require_once('../header/navbar.php'); ?>
     <?php require_once('../footer.php'); ?></header>

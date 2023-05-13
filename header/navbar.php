@@ -15,7 +15,7 @@
 <header>
     <nav>
         <div class="logo">
-            <a href="../index.php"><i class="ri-pie-chart-line"></i>PizzaShop</a>
+            <a href="../index.php"><i class="ri-pie-chart-line"></i>Cestino Pizza</a>
         </div>
         <div class="menu-toggle">
             <img src="../image/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
