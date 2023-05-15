@@ -86,6 +86,22 @@ session_start();
          <button class="commander" data-produit="SUMMER GRILLED" data-prix="13">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
          </li>
             <!-- Ajouter d'autres articles en promotion ici -->
+            <li>
+            <h4>Chicken & Cheddar</h4>
+            <img src="../image/pizza/chikenchedar.avif" alt="Chicken & Cheddar">
+            <h5><p class="description">Une pizza généreuse avec du poulet grillé, du fromage cheddar, des oignons rouges et une délicieuse sauce barbecue.</p></h5>
+            <h5><p class="ingredients">Ingrédients : Poulet grillé, fromage cheddar, oignons rouges, sauce barbecue</p></h5>
+            <p>Prix:13.99 €</p>
+        <button class="commander" data-produit="Chicken & Cheddar" data-prix="13.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
+            </li>
+            <li>
+                <h4>Savoyarde</h4>
+                <img src="../image/pizza/savoyarde.avif" alt="Savoyarde">
+                <h5><p class="description">Une pizza savoyarde avec du fromage reblochon, des lardons fumés et des pommes de terre pour un goût authentique des Alpes.</p></h5>
+                <h5><p class="ingredients">Ingrédients : Fromage reblochon, lardons fumés, pommes de terre, oignons</p></h5>
+                <p>Prix:11.99 €</p>
+        <button class="commander" data-produit="Savoyarde" data-prix="11.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
+            </li>
     </ul>
     <div>
     <div class="centered">

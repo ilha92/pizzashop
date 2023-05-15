@@ -7,7 +7,6 @@ session_start();
   <meta charset="UTF-8">
   <title>Aperçu de comment nous traitons vos données</title>
 </head>
-<br>
 <body>
 <header>
      <h1 style="display: flex; align-items: center;">
@@ -15,6 +14,7 @@ session_start();
      <?php include_once '../header/navbar.php'; ?>
         <?php require_once('../footer.php'); ?>
  </header>
+ <br><br>
   <h1>Aperçu de comment nous traitons vos données</h1>
   <br>
   <p>Cette notice décrit la manière dont PIZZASHOP (ci-après « PizzaShop » ou « nous ») utilise, protège et partage les données à caractère personnel des clients collectées par PizzaShop via les sites web et applications mobiles gérés par PizzaShop (ci-après « les services en ligne »)</p>
@@ -64,13 +64,13 @@ session_start();
 </ul>
 <br>
 <p>Pour exercer vos droits ou pour toute question concernant la manière dont PizzaShop traite vos données à caractère personnel, vous pouvez nous contacter en utilisant les coordonnées fournies dans la section "Nous contacter" de la présente notice.</p>
-<br>
+<br><br>
 <h2>Comment protégeons-nous vos données à caractère personnel ?</h2>
-<br>
+<br><br>
 <p>PizzaShop met en place des mesures de sécurité appropriées pour protéger vos données à caractère personnel contre tout accès non autorisé, utilisation abusive, divulgation, altération ou destruction.</p>
-<br>
+<br><br>
 <h2>Modifications de la présente notice</h2>
-<br>
+<br><br>
 <p>PizzaShop peut modifier la présente notice à tout moment. Toute modification sera affichée sur les services en ligne.</p>
 
 <br><br><br><br><br><b><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
