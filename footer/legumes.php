@@ -4,7 +4,7 @@
 <head>
     <title>Légumes frais - Domino's Pizza</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
-
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
     <style>
         body {
             margin: 0;

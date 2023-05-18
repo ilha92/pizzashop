@@ -6,6 +6,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title>Aperçu de comment nous traitons vos données</title>
+  <link rel="icon" type="image/x-icon" href="../image/panier.ico">
 </head>
 <body>
 <header>

@@ -36,8 +36,9 @@ if (isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pizza Shop</title>
+    <title>Cestino Pizza</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
 </head>
 <body>
 <header>

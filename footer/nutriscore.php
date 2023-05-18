@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <title>Nutri-Score chez PizzaShop</title>
   <link rel="stylesheet" type="text/css" href="../style/style.css">
+  <link rel="icon" type="image/x-icon" href="../image/panier.ico">
   <style>
    body {
   text-align: center;

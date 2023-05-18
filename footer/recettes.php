@@ -4,6 +4,34 @@
 <html lang="en">
 <head>
   <title>Cestino Pizza-recettes-pizzas</title>
+  <link rel="icon" type="image/x-icon" href="../image/panier.ico">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusion de la bibliothèque jQuery -->
+    <script>
+        $(document).ready(function() {
+            // Fonction pour ajouter un produit au panier
+            $(".commander").click(function() {
+                var produit = $(this).data("produit"); // Récupérer le nom du produit à partir de l'attribut data
+                var prix = $(this).data("prix"); // Récupérer le prix du produit à partir de l'attribut data
+
+                // Envoyer les données au script panier.php via Ajax
+                $.ajax({
+                    url: "../pages/panier.php",
+                    type: "post",
+                    data: {
+                        commander: 1,
+                        produit: produit,
+                        prix: prix
+                    },
+                    success: function(response) {
+                        alert("Le produit a été ajouté au panier."); // Afficher un message d'alerte en cas de succès
+                    },
+                    error: function() {
+                        alert("Une erreur s'est produite. Veuillez réessayer."); // Afficher un message d'erreur en cas d'échec
+                    }
+                });
+            });
+        });
+    </script>
     <style>
     body {
       text-align: center;
@@ -16,6 +44,14 @@
     
     h1, p {
       text-align: center;
+    }
+
+    .recette {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        text-align: center;
     }
   </style>
 </head>
@@ -31,13 +67,18 @@
     <br><br>
     <h1>DES RECETTES SUR-MESURE</h1>
     <br>
-    <p>Chez Domino's Pizza, nous proposons régulièrement de nouvelles recettes imaginées par nos soins ou bien inspirées par vos propres créations. En fait, toutes nos pizzas sont préparées à la commande, comme celles créées soi-même à la maison, avec de la pâte fraîche et vos ingrédients préférés. Les pizzas commandées sont disponibles le plus rapidement possible, à emporter au comptoir en magasin ou bien livrée à domicile, voilà la recette d'une soirée pizza réussie !
-    S'adressant aussi bien aux végétariens qu'aux amateurs de viande, Domino's vous propose de découvrir de délicieuses pizzas, classiques ou originales. En 2018, Domino's lance même sa propre gamme Vegan. 
-    Pour chaque pizza proposée, choisissez entre plusieurs types de pâtes : fine, classique, Pan et Mozza Crust. Quelle que soit l’idée de pizza que vous aviez en tête, elle se trouve chez Domino’s.
-    En fonction des saisons, découvrez nos nouvelles recettes améliorés composées de légumes frais, d'ingrédients plus savoureux et en quantité toujours plus généreuse !
-  </p>
+    <p class="recette">Chez Cestino Pizza, nous proposons régulièrement de nouvelles recettes imaginées par nos soins ou bien inspirées par vos propres créations.
+      En fait, toutes nos pizzas sont préparées à la commande, comme celles créées soi-même à la maison, avec de la pâte fraîche et vos ingrédients
+      préférés. Les pizzas commandées sont disponibles le plus rapidement possible, à emporter au comptoir en magasin ou bien livrées à domicile,
+     voilà la recette d'une soirée pizza réussie !S'adressant aussi bien aux végétariens qu'aux amateurs de viande, 
+     Cestino Pizza vous propose de découvrir de délicieuses pizzas, classiques ou originales. En 2018, Cestino Pizza lance même sa propre gamme Vegan. 
+     Pour chaque pizza proposée, choisissez entre plusieurs types de pâtes : fine, classique, Pan et Mozza Crust. Quelle que soit
+     l'idée de pizza que vous aviez en tête, elle se trouve chez Cestino Pizza.
+    En fonction des saisons, découvrez nos nouvelles recettes améliorées composées
+     de légumes frais, d'ingrédients plus savoureux et en quantité toujours plus généreuse !
+    </p>
 <br><br>
-<h2>LE TOP 6 DES PIZZAS DOMINO'S</h2>
+<h2>LE TOP 6 DES PIZZAS Cestino Pizza</h2>
 <br><br>
 <div id="classique" class="pizza">
 <ul>

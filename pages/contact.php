@@ -48,6 +48,7 @@ if (isset($_POST['submit'])) {
     <title>Cestino Pizza - Contact</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
 </head>
 <body>
 <header>
@@ -56,7 +57,6 @@ if (isset($_POST['submit'])) {
      <?php include_once '../header/navbar.php'; ?>
         <?php require_once('../footer.php'); ?>
      </header>
-
     <main>
         <form action="" method="post">
              <h1>Nous contacter</h1>

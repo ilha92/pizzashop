@@ -21,13 +21,13 @@
             <img src="../image/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
         </div>
         <ul class="nav-links">
-            <li><a href="../pages/promos.php">Promos du jour</a></li>
+            <li><a href="../pages/promos.php"><i class="ri-calendar-todo-fill"></i>Pizza du jour</a></li>
             <li><a href="../pages/carte.php"><i class="ri-restaurant-line"></i>Carte</a></li>
             <li><a href="../pages/engagements.php"><i class="ri-hand-heart-line"></i>Engagements</a></li>
             <li><a href="../pages/panier.php"><i class="ri-shopping-basket-line"></i>Panier</a></li>
             <li><a href="../pages/contact.php"><i class="ri-contacts-line"></i>Contact</a></li>
             <li><a href="../pages/compte.php"><i class="ri-user-line"></i>Mon compte</a></li>
-            <li><a href="../pages/avis.php">Donner son avis</a></li>
+            <li><a href="../pages/avis.php"><i class="ri-pencil-line"></i>Donner son avis</a></li>
             <?php
             // Vérifier si l'utilisateur est connecté
             if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {

@@ -4,6 +4,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
     <style>
         main {
           padding: 20px;
@@ -13,7 +14,6 @@
         }
 
         div {
-          margin: 20px;
           width: calc(50% - 40px);
           display: flex;
           flex-direction: column;
@@ -61,6 +61,7 @@
     <h2>FABRIQUÉE À PARTIR DE BLÉ 100% FRANÇAIS</h2>
     <br>
     <p>Notre pâte est fabriquée à partir de farine de blés cultivés en France et sélectionnés pour PizzaShop par Les Grands Moulins de Paris.</p>
+    <br><br><br><br><br>
     </div>  
     <div>
         <br>
@@ -68,8 +69,9 @@
         <br>
         <h2>PÂTE FRAÎCHE JAMAIS CONGELÉE </h2>
         <br>
-        <p>Chez Domino’s la pâte à pizza est fabriquée dans nos ateliers de production en France et les pâtons sont livrés frais à nos magasins plusieurs fois par semaine.
+        <p>Chez Cestino Pizza la pâte à pizza est fabriquée dans nos ateliers de production en France et les pâtons sont livrés frais à nos magasins plusieurs fois par semaine.
         </p>
+        <br><br><br><br><br>
     </div>
     <div>
         <br>
@@ -79,8 +81,8 @@
         <br>
         <p>Nos pizzas sont préparées sous vos yeux et travaillées grâce à un savoir-faire unique de plus de 60 ans.
         </p>
+        <br><br><br><br><br><br><br><br><br>
     </div>
-    <br><br><br><br><br><br>
     <h2>MAIS C'EST AUSSI DES INGRÉDIENTS SELECTIONNÉS AVEC SOIN</h2>
     <br><br>
     <p>Une bonne pizza, c’est d’abord de bons ingrédients. Depuis les légumes jusqu’aux fromages, en passant par les viandes, nous sélectionnons nos ingrédients pour leurs qualités nutritionnelles et leur saveur. 
@@ -91,8 +93,7 @@
     <br>
     <img width="1000" height="315" src="../footer/images/989x241px-olives.avif" alt="">
     <br>
-    <p  width="560" height="315">Depuis le 1er septembre, Domino’s utilise des olives Kalamata Bio dénoyautées pour l’ensembles des recettes contenant des olives.
-
+    <p  width="560" height="315">Depuis le 1er septembre, Cestino Pizza utilise des olives Kalamata Bio dénoyautées pour l’ensembles des recettes contenant des olives.
 Issues des villages de Sparte et Kalamata dans la province du Péloponnèse en Grèce, ces olives sont reconnues pour leur goût riche et fruité. Elles conservent un équilibre parfait entre qualité supérieure et respect de l’environnement. 
 </p>
 </div>

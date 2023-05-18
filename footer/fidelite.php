@@ -5,6 +5,7 @@ session_start();
 <html>
 <head>
     <title>PizzaShop Fidélité</title>
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
 </head>
 <body>
 <header>

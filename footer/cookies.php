@@ -6,6 +6,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title>Politique en matière de cookies - Pizzashop</title>
+  <link rel="icon" type="image/x-icon" href="../image/panier.ico">
 </head>
 <body>
 <header>

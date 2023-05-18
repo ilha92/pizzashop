@@ -6,6 +6,7 @@ session_start();
 <head>
 <title>Pizza Shop - Carte</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusion de la bibliothèque jQuery -->
   <script>
 $(document).ready(function() {
@@ -220,7 +221,7 @@ $(document).ready(function() {
             </li>
             <li>
     <h3>Reine</h3>
-    <img src="../image/pizza/reine.avif" alt="">
+    <img src="../image/pizza/reine.avif" alt="pizza reine">
     <h5><p>Description: Pizza avec de la sauce tomate, du fromage mozzarella, du jambon et de l'ananas.</p></h5>
     <h5><p>Ingrédients: Sauce tomate, mozzarella, jambon, champignons de Paris.</p></h5>
     <p>Prix: 12,99€</p>

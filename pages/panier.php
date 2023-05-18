@@ -2,6 +2,12 @@
 // Démarrer la session
 session_start();
 
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    // Rediriger vers la page de login si l'utilisateur n'est pas connecté
+    header("Location: ../acces/login.php");
+    exit();
+}
 // Vérifier si un produit a été ajouté au panier
 if (isset($_POST['commander']) && $_POST['commander'] == 1) {
     $produit = $_POST['produit'];
@@ -45,8 +51,9 @@ if (isset($_POST['supprimer'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pizza Shop - Panier</title>
+    <title>Cestino Pizza - Panier</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -77,7 +84,7 @@ if (isset($_POST['supprimer'])) {
      <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza</h1>
      <?php include_once '../header/navbar.php'; ?>
         <?php require_once('../footer.php'); ?>
-     </header>
+</header>
     <main>
         <br><br>
         <h2>Panier</h2>

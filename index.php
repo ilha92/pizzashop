@@ -5,8 +5,14 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pizza Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bienvenue sur Cestino Pizza, le meilleur endroit pour déguster de délicieuses pizzas. Venez découvrir notre menu varié et nos offres spéciales. Commandez en ligne ou rendez-vous dans l'un de nos restaurants.">
+<meta name="keywords" content="Cestino Pizza, pizzas, restaurant, commande en ligne, menu, offres spéciales">
+<meta name="author" content="Cestino Pizza">
+<title>Cestino Pizza - Les meilleures pizzas à déguster</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="panier.ico">
 </head>
 <body>
      <header>

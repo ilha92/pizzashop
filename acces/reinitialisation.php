@@ -10,6 +10,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;','root', '');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réinitialisation de mot de passe</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
     <script>
         function togglePassword(inputId, btnId) {
             var passwordInput = document.getElementById(inputId);

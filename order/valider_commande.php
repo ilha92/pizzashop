@@ -26,6 +26,7 @@
 <head>
     <title>Cestino Pizza - Valider Commande</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
 </head>
 <body>
 <header>

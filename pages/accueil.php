@@ -3,6 +3,7 @@
 <head>
     <title>Pizza Shop - Accueil</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../image/panier.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclusion de la bibliothèque jQuery -->
     <script>
         $(document).ready(function() {
@@ -13,7 +14,7 @@
 
                 // Envoyer les données au script panier.php via Ajax
                 $.ajax({
-                    url: "panier.php",
+                    url: "../pages/panier.php",
                     type: "post",
                     data: {
                         commander: 1,
