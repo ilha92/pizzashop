@@ -1,2 +1,2 @@
-# pizzashop
-site de pizza en php,html,css
+# Cestino pizza
+site de pizza en php,html,css et javascript
