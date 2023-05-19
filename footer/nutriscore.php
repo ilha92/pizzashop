@@ -1,5 +1,6 @@
-<?php session_start(); ?>
-
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +62,6 @@ h1, p {
 <p>Après calcul, le score obtenu par un produit permet de lui attribuer une lettre et une couleur tel que montré dans le schéma ci-dessous.</p>
 </section>
   </main>
-  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

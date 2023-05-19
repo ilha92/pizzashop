@@ -84,6 +84,6 @@ if (isset($_POST['submit'])) {
             <input type="submit" name="submit" value="Envoyer">
         </form>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

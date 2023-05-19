@@ -8,7 +8,7 @@
                     <li><a href="../pages/carte.php">La Carte</a></li>
                     <li><a href="../footer/recettes.php">RECETTES DE PIZZA</a></li>
                     <li><a href="#">DOUBLE KIFF</a></li>
-                    <li><a href="../index.php">Pizza Shop</a></li>
+                    <li><a href="../index.php">Cestino Pizza</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -25,14 +25,24 @@
                     <li><a href="../footer/cookies.php">COOKIES</a></li>
                     <li><a href="../footer/personnel.php">DONNÉES PERSONNELLES</a></li>
                     <li><a href="../pages/contact.php">NOUS CONTACTER</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Service clients</h3>
-                <ul>
                     <li><a href="../footer/politique.php">POLITIQUE DE DIVULGATION RESPONSABLE</a></li>
                 </ul>
             </div>
+            <div class="footer-column">
+            <h3>Nous suivre</h3>
+            <br>
+            <ul>
+    <a href="https://twitter.com/ilias_hamel" target="_blank">
+      <img src="../footer/images/twitter.webp" alt="twitter">
+    </a>
+    <a href="https://www.instagram.com/ilcestinopizza.ve/" target="_blank">
+      <img src="../footer/images/instagram.webp" alt="instagram">
+    </a>
+    <a href="https://www.youtube.com/channel/UCphb30cQ73NmjWBmZvnad-Q" target="_blank">
+      <img src="../footer/images/youtube.webp" alt="Youtube">
+    </a>
+</ul>
+     </div>
             <div class="footer-column">
                 <h3>Condition des Offres</h3>
                 <ul>
@@ -42,6 +52,22 @@
                 </ul>
             </div>
         </div>
+
+        <div class="footer-column">
+         <h4>PAYEZ EN TOUTE SÉCURITÉ AVEC</h4>
+         <ul>
+         <img src="../footer/images/visa.webp" alt="">
+         <img src="../footer/images/maestro.webp" alt="">
+         <img src="../footer/images/mastercard.webp" alt="">
+         </ul>
+        </div>
+        
+        <div class="footer-column">
+        <ul>
+        <li><a href="../footer/mention.php">Mention Légales</a></li>
+        <li><a href="../footer/condition.php">CONDITIONS GÉNÉRALES DE VENTE</a></li>
+        </div>
+        </ul>
     </div>
 </footer>
 

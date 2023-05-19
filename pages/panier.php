@@ -83,11 +83,11 @@ if (isset($_POST['supprimer'])) {
      <h1 style="display: flex; align-items: center;">
      <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza</h1>
      <?php include_once '../header/navbar.php'; ?>
-        <?php require_once('../footer.php'); ?>
 </header>
     <main>
         <br><br>
-        <h2>Panier</h2>
+        <h2>Panier :</h2>
+        <br><br>
         <?php
         if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
             $total = 0;
@@ -157,10 +157,10 @@ if (isset($_POST['supprimer'])) {
             echo "<p>Votre panier est vide.</p>";
         } ?>
     </main>
+    <br><br><br><br><br><br>
     <div class="centered">
         <h5>Pour votre santé, évitez de manger trop gras, trop sucré, trop salé</h5>
         <h5>Pour votre santé, évitez de grignoter entre les repas</h5>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

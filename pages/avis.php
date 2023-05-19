@@ -220,6 +220,6 @@ if ($result !== false) {
     die("Erreur de requête : " . print_r($stmt->errorInfo(), true));
 }
 ?>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

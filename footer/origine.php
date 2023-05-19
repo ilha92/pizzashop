@@ -61,11 +61,11 @@
      <h1 style="display: flex; align-items: center;">
     <h1>Cestino pizza</h1>
      <?php include_once '../header/navbar.php'; ?>
-        <?php require_once('../footer.php'); ?>
  </header>
     <main>
         <div>
             <h1>NOS PRODUITS D'ORIGINE FRANÇAISE</h1>
+            <br>
             <p>Chez Domino’s, les pizzas sont préparées en France, dans les cuisines de nos magasins et sur commande. Les recettes ont spécialement été pensées et élaborées pour le marché français pour s’adapter aux attentes des consommateurs.</p>
         </div>
     </main>
@@ -92,6 +92,5 @@
 </a>
     </div>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

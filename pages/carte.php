@@ -100,7 +100,7 @@ $(document).ready(function() {
      <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza</h1>
      <?php include_once '../header/navbar.php'; ?>
         <?php require_once('../footer.php'); ?>
-     </header>
+</header>
 <br><br>
 <button onclick="showCategory('toutes')">A la une</button>
 <button onclick="showCategory('classique')">Grands Classiques</button>
@@ -392,6 +392,6 @@ $(document).ready(function() {
         <h5>Pour votre santé, évitez de manger trop gras, trop sucré, trop salé</h5>
         <h5>Pour votre santé, évitez de grignoter entre les repas</h5>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

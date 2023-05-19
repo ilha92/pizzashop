@@ -142,6 +142,6 @@ session_start();
   <li>Des promotions spéciales et des réductions sur certains produits.</li>
   <li>Des invitations à des événements et des dégustations.</li>
 </ul>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

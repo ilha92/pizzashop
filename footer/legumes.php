@@ -61,7 +61,6 @@
      <h1 style="display: flex; align-items: center;">
     <h1>Cestino pizza</h1>
      <?php include_once '../header/navbar.php'; ?>
-        <?php require_once('../footer.php'); ?>
  </header>
     <main>
         <div>
@@ -98,6 +97,5 @@
 <h5> Pour votre santé, évitez de grignoter entre les repas</h5>
     </div>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

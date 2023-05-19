@@ -74,6 +74,6 @@ session_start();
 <br><br>
 <p>PizzaShop peut modifier la présente notice à tout moment. Toute modification sera affichée sur les services en ligne.</p>
 
-<br><br><br><br><br><b><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><b><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

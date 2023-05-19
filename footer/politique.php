@@ -28,6 +28,6 @@ session_start();
     <h2>Comment signaler une faille de sécurité ?</h2>
     <br>
     <p>Vous pouvez signaler des problèmes de sécurité potentiels ou suspects à l'équipe de sécurité de Cestino Pizza en cliquant sur le lien ci-dessous ou en envoyant un courriel à vulnerability@pizzashop.com. Toutes les vulnérabilités signalées doivent respecter les conditions de notre programme de divulgation responsable, disponible ici : <a href="https://pizzashop.responsibledisclosure.com/hc/fr-fr">https://pizzashop.responsibledisclosure.com/hc/fr-fr</a>.</p>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

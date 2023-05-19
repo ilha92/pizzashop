@@ -69,5 +69,5 @@ session_start();
  <br>
  <p>PizzaShop se réserve le droit d'apporter des modifications à cette politique à tout moment en mettant à jour la présente page.  Cette politique en matière de cookies est applicable à compter du 28/05/2023.</p>    
 </body>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </html>
