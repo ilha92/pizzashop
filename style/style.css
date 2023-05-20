@@ -684,3 +684,16 @@ footer a:hover {
         .upload-button i {
           font-size: 26px;
         }
+
+      /*newprix*/
+        
+        figure {
+          display: flex;
+          align-items: center;
+          margin-right: 20px; /* Espacement entre l'image et le texte */
+        }
+        
+        figcaption {
+          margin-left: 10px; /* Espacement entre l'image et le texte */
+        }
+        

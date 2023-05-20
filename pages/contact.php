@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
              <p>Vous pouvez nous contacter via les coordonnées suivantes :</p>
         <ul>
             <br><br>
-            <p><i class="ri-mail-line"></i>Email : info@pizzashop.com</p>
+            <p><i class="ri-mail-line"></i>Email : iliashamel041@gmail.com</p>
             <br>
             <p><i class="ri-phone-line"></i>Téléphone : +33 123 456 789</p>
             <br>

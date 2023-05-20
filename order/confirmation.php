@@ -136,5 +136,6 @@ $bdd = null;
         <input type="hidden" name="email" id="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : '' ?>" />
         <input type="hidden" name="valider" value="true" />
     </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

@@ -7,14 +7,12 @@
                 <ul>
                     <li><a href="../pages/carte.php">La Carte</a></li>
                     <li><a href="../footer/recettes.php">RECETTES DE PIZZA</a></li>
-                    <li><a href="#">DOUBLE KIFF</a></li>
                     <li><a href="../index.php">Cestino Pizza</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>NOS ENGAGEMENTS</h3>
                 <ul>
-                    <li><a href="#">NOUVELLE APP'</a></li>
                     <li><a href="../footer/nutriscore.php">NUTRISCORE</a></li>
                     <li><a href="../pages/engagements.php">PRESSE</a></li>
                 </ul>
@@ -48,7 +46,6 @@
                 <ul>
                     <li><a href="../footer/fidelite.php">PizzaShop FIDÉLITÉ</a></li>
                     <li><a href="../pages/promos.php">OFFRE DU MOMENT</a></li>
-                    <li><a href="#">NOUVEAUX JOURS FOUS</a></li>
                 </ul>
             </div>
         </div>

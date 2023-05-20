@@ -112,7 +112,10 @@ $(document).ready(function() {
         <ul>
         <li>
     <h3>Margherita</h3>
-    <img src="../image/pizza/margherita.avif" alt="">
+    <div style="position: relative;">
+    <img src="../image/pizza/margherita.avif" alt="Margherita">
+    <img src="../image/pizza/basprix.png" alt="" style="position: absolute; top: 0; left: 0; z-index: 2;">
+  </div>
     <h5><p>Description: Pizza classique avec de la sauce tomate, du fromage mozzarella et du basilic.</p></h5>
     <h5><p>Ingrédients: Sauce tomate, fromage mozzarella, basilic.</p></h5>
     <p>Prix: 8,99€</p>
@@ -246,6 +249,14 @@ $(document).ready(function() {
         <button class="commander" data-produit="Reine" data-prix="12.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button> 
     </div>       
 </li>
+<li>
+    <h3>Cannibale</h3>
+    <img src="../image/pizza/cannibale.avif" alt=""> <!-- Chemin de l'image de la pizza Beef & Cheddar -->
+    <h5><p>Une pizza avec de la viande de boeuf hachée, du fromage cheddar, des oignons et de la sauce barbecue.</p></h5>
+    <h5><p>Ingrédients: Sauce barbecue, mozzarella, poulet rôti*, merguez*, haché au bœuf assaisonné*..</p></h5>
+    <p>Prix: 11,99€</p>
+    <button class="commander" data-produit="Cannibale" data-prix="11.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
+</li>
 </ul>
 </div>
 
@@ -284,6 +295,17 @@ $(document).ready(function() {
         <p>Prix: 11,99€</p>
         <button class="commander" data-produit="Pizza Vegetarienne" data-prix="11.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
     </li>
+    <li>
+        <h3>Classique Jambon</h3>
+        <div style="position: relative;">
+    <img src="../image/pizza/jambonn.avif" alt="Super Veggie" style="position: relative; z-index: 1;">
+    <img src="../image/pizza/basprix.png" alt="" style="position: absolute; top: 0; left: 0; z-index: 2;">
+  </div>
+        <p>Description: Pizza avec de la sauce tomate, du fromage mozzarella, du jambon de dinde.</p></h5>
+        <h5><p>Ingrédients:Sauce tomate, mozzarella, jambon.</p></h5>
+        <p>Prix: 8€</p>
+        <button class="commander" data-produit="Classique Jambon" data-prix="8">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
+    </li>
      <li>
          <h4>Authentique Raclette</h4>
          <img src="../image/pizza/authentiqueraclette.avif" alt="Authentique Raclette">
@@ -299,8 +321,10 @@ $(document).ready(function() {
     <ul>
     <li>
         <h3>CHEEKY PIZZA MERGUEZ</h3>
+        <div style="position: relative;">
         <img src="../image/pizza/Cheeky pizza merguez.avif" alt="">
-        <img src="../image/pizza/new.avif" alt=""> <!-- Chemin de l'image de la pizza Beef & Cheddar -->
+        <img src="../image/pizza/new.avif" alt="" style="position: absolute; top: 0; left: 0;">
+        </div>
         <h5><p class="description">Une pizza épicée à la merguez garnie de poivrons et de frites, accompagnée d'une sauce blanche kebab.</p></h5>
         <h5><p class="ingredients">Ingrédients : Sauce tomate, mozzarella, viande kebab, duo de poivrons, Domino's Fries, sauce blanche kebab.</p></h5>
         <p>Prix:14 €</p>
@@ -308,8 +332,10 @@ $(document).ready(function() {
     </li>
     <li>
         <h4>SUMMER GRILLED</h4>
+        <div style="position: relative;">
         <img src="../image/pizza/summer grilled.avif" alt="Authentique Raclette">
-        <img src="../image/pizza/new.avif" alt="">
+        <img src="../image/pizza/new.avif" alt="" style="position: absolute; top: 0; left: 0;">
+        </div>
         <h5><p class="description">Une pizza légère avec des légumes grillés, des olives et des tomates, agrémentée d'origan.</p></h5>
         <h5><p class="ingredients">Ingrédients : Sauce tomate, mozzarella, mélange de légumes grillés 
             (aubergines, courgettes, poivrons rouges et jaunes),olives Kalamata bio, tomates fraîches, origan.</p></h5>
@@ -318,8 +344,10 @@ $(document).ready(function() {
     </li>
     <li>
         <h4>CHEEKY PIZZA KEBAB</h4>
+        <div style="position: relative;">
         <img src="../image/pizza/cheeky kebab.avif" alt="Divine 3 Fromages">
-        <img src="../image/pizza/new.avif" alt="">
+        <img src="../image/pizza/new.avif" alt="" style="position: absolute; top: 0; left: 0;">
+        </div>
         <h5><p class="description">Une pizza kebab avec une base de sauce tomate, de la mozzarella, de la viande kebab, des poivrons et une sauce blanche kebab.</p></h5>
         <h5><p class="ingredients">Ingrédients : Sauce tomate, mozzarella, viande kebab, duo de poivrons,sauce blanche kebab.</p></h5>
         <p>Prix:12.20 €</p>
@@ -327,8 +355,10 @@ $(document).ready(function() {
     </li>
             <li>
                 <h4>SUBLIM'CURRY</h4>
+                <div style="position: relative;">
                 <img src="../image/pizza/curry.avif" alt="">
-                <img src="../image/pizza/new.avif" alt="">
+                <img src="../image/pizza/new.avif" alt="" style="position: absolute; top: 0; left: 0;">
+                </div>
                 <h5><p class="description">Une pizza SUBLIM'CURRY avec Crème fraîche légère française, mozzarella, oignons, poulet rôti.</p></h5>
                 <h5><p class="ingredients">Ingrédients :Crème fraîche légère française, mozzarella, oignons, poulet rôti, duo de poivrons, sauce au curry.</p></h5>
                 <p>Prix:11.99 €</p>
@@ -336,12 +366,24 @@ $(document).ready(function() {
             </li>
             <li>
                 <h4>CHICK'N GRILLED</h4>
+                <div style="position: relative;">
                 <img src="../image/pizza/CHIKEN GRIL.avif" alt="Chicken & Cheddar">
-                <img src="../image/pizza/new.avif" alt="">
+                <img src="../image/pizza/new.avif" alt="new" style="position: absolute; top: 0; left: 0;">
+                </div>
                 <h5><p class="ingredients">Ingrédients: Sauce tomate, mozzarella, mélange de légumes grillés 
                 (aubergines, courgettes, poivrons rouges et jaunes), poulet rôti, tomates fraîches, origan.</p></h5>
                 <p>Prix:13.99 €</p>
         <button class="commander" data-produit="CHICK'N GRILLED" data-prix="13.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
+      </li>
+      <li>
+                <h4>Forestiere</h4>
+                <div style="position: relative;">
+  <img src="../image/pizza/forestiere.avif" alt="Vegan Margherita">
+  <img src="../image/pizza/new.avif" alt="" style="position: absolute; top: 0; left: 0;">
+</div>
+                <h5><p class="ingredients">Ingrédients: Crème fraîche légère française, mozzarella, lardons fumés, oignons, jambon, champignons de Paris, origan.</p></h5>
+                <p>Prix:12.95 €</p>
+        <button class="commander" data-produit="CHICK'N GRILLED" data-prix="12.95">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
       </li>
     </ul>
 </div>
@@ -372,13 +414,36 @@ $(document).ready(function() {
                 <p>Prix:9.99 €</p>
         <button class="commander" data-produit="Peppina" data-prix="9.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
         </li>
-            <li>
-                <h4>Super Veggie</h4>
-                <img src="../image/pizza/supervegie.avif" alt="Super Veggie">
+        <li>
+  <h4>Super Veggie</h4>
+  <div style="position: relative;">
+    <img src="../image/pizza/supervegie.avif" alt="Super Veggie" style="position: relative; z-index: 1;">
+    <img src="../image/pizza/basprix.png" alt="" style="position: absolute; top: 0; left: 0; z-index: 2;">
+  </div>
+  <h5><p class="description">Une pizza végétarienne généreuse avec une variété de légumes frais et savoureux, idéale pour les amateurs de légumes.</p></h5>
+  <h5><p class="ingredients">Ingrédients : Sauce tomate, mozzarella, roquette, huile d’olive AOP Kalamata.</p></h5>
+  <p>Prix : 5 €</p>  
+  <button class="commander" data-produit="Super Veggie" data-prix="7.99">Ajouter au panier <i class="ri-price-tag-3-line"></i></button>
+</li>
+
+      <li>
+                <h4>Rocket Veggie</h4>
+                <img src="../image/pizza/Rocket.avif" alt="Super Veggie">
                 <h5><p class="description">Une pizza végétarienne généreuse avec une variété de légumes frais et savoureux, idéale pour les amateurs de légumes.</p></h5>
                 <h5><p class="ingredients">Ingrédients : Fromage, poivrons, champignons, oignons, tomates, olives, maïs</p></h5>
                 <p>Prix:7.99 €</p>  
         <button class="commander" data-produit="Super Veggie" data-prix="7.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
+      </li>
+      <li>
+                <h4>Vegan Margherita</h4>
+                <div style="position: relative;">
+  <img src="../image/pizza/veganmargherita.avif" alt="Vegan Margherita">
+  <img src="../image/pizza/vegan.avif" alt="" style="position: absolute; top: 10px; left: 10px;">
+</div>
+                <h5><p class="description">Une pizza végétarienne généreuse avec une variété de légumes frais et savoureux, idéale pour les amateurs de légumes.</p></h5>
+                <h5><p class="ingredients">Ingrédients : Fromage, poivrons, champignons, oignons, tomates, olives, maïs</p></h5>
+                <p>Prix:7.99 €</p>  
+        <button class="commander" data-produit="Vegan Margherita" data-prix="13.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
       </li>
 </ul>
 </div>
@@ -388,6 +453,18 @@ $(document).ready(function() {
             $('#' + category).show();
         }
 </script>
+<div class="centered">
+  <figure>
+    <img src="../image/pizza/new.avif" alt="" srcset="">
+    <figcaption>New = Nouveau produit</figcaption>
+  </figure>
+  <figure>
+    <img src="../image/pizza/basprix.png" alt="" srcset="">
+    <figcaption>Le prix minimum s'applique aux produits suivis de ce pictogramme sur l'ensemble du site. Des suppléments peuvent s'appliquer pour des recettes et tailles différentes.</figcaption>
+  </figure>
+</div>
+</div>
+    <br><br><br>
       <div class="centered">
         <h5>Pour votre santé, évitez de manger trop gras, trop sucré, trop salé</h5>
         <h5>Pour votre santé, évitez de grignoter entre les repas</h5>
