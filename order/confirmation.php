@@ -122,20 +122,23 @@ $bdd = null;
     </script>
 </head>
 <body>
-    <header>
-        <h1>Pizza Shop</h1>
-        <?php require_once('../header/navbar.php'); ?>
-        <?php require_once('../footer.php'); ?>
-    </header>
+<header>
+    <h1 style="display: flex; align-items: center;">
+        <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza
+    </h1>
+    <?php include_once '../header/navbar.php'; ?>
+    <?php require_once('../footer.php'); ?>
+</header>
     <br><br>
     <h1>Merci pour votre commande</h1>
     <h4>Revenez nous voir</h4>
+    <h3>A bientôt </h3>
     <form id="confirmation-form" method="post" action="">
     <a href="../pages/carte.php" class="en-savoir-plus">Retour a la carte</a>
         <input type="hidden" name="pseudo" id="pseudo" value="<?php echo isset($_POST['pseudo']) ? $_POST['pseudo'] : '' ?>" />
         <input type="hidden" name="email" id="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : '' ?>" />
         <input type="hidden" name="valider" value="true" />
     </form>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

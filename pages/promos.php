@@ -50,8 +50,8 @@ session_start();
      <ul>
             <li>
                 <h3>Pizza Margherita</h3>
-                <img src="../image/pizza/margherita.avif" alt="">
-                <img src="../image/pizza/basprix.png" alt="" style="position: absolute; top: 0; left: 0; z-index: 2;">
+                <img src="../image/pizza/margherita.avif" alt="margherita">
+                <img src="../image/pizza/basprix.png" alt="basprix">
                 <br>
                 <p>Pizza classique avec de la sauce tomate, du fromage et des tomates fraîches.</p>
                 <br>
@@ -72,7 +72,7 @@ session_start();
             <li>
          <h3>CHEEKY PIZZA MERGUEZ</h3>
          <img src="../image/pizza/Cheeky pizza merguez.avif" alt=""> <!-- Chemin de l'image de la pizza Beef & Cheddar -->
-         <img src="../image/pizza/new.avif" alt="" style="position: absolute; top: 0; left: 0; z-index: 2;">
+         <img src="../image/pizza/new.avif" alt="" >
          <h5><p class="description">Une pizza épicée à la merguez garnie de poivrons et de frites, accompagnée d'une sauce blanche kebab.</p></h5>
          <h5><p class="ingredients">Ingrédients : Sauce tomate, mozzarella, viande kebab, duo de poivrons, Domino's Fries, sauce blanche kebab.</p></h5>
          <p>Prix:14 €</p>
@@ -81,7 +81,7 @@ session_start();
          <li>
          <h4>SUMMER GRILLED</h4>
          <img src="../image/pizza/summer grilled.avif" alt="Authentique Raclette">
-         <img src="../image/pizza/new.avif" alt="" style="position: absolute; top: 0; left: 0; z-index: 2;">
+         <img src="../image/pizza/new.avif" alt="" >
          <h5><p class="description">Une pizza légère avec des légumes grillés, des olives et des tomates, agrémentée d'origan.</p></h5>
          <h5><p class="ingredients">Ingrédients : Sauce tomate, mozzarella, mélange de légumes grillés (aubergines, courgettes, poivrons rouges et jaunes),olives Kalamata bio, tomates fraîches, origan.</p></h5>
          <p>Prix:13 €</p>

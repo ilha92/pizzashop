@@ -45,6 +45,6 @@ session_start();
     <h3>Directeur de la Publication :</h3>
 <br>
     <p>Hamel Ilias, Président de Cestino Pizza France.</p>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

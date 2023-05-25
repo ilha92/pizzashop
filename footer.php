@@ -44,7 +44,7 @@
             <div class="footer-column">
                 <h3>Condition des Offres</h3>
                 <ul>
-                    <li><a href="../footer/fidelite.php">PizzaShop FIDÉLITÉ</a></li>
+                    <li><a href="../footer/fidelite.php">Cestino Pizza FIDÉLITÉ</a></li>
                     <li><a href="../pages/promos.php">OFFRE DU MOMENT</a></li>
                 </ul>
             </div>
@@ -55,6 +55,7 @@
          <ul>
          <img src="../footer/images/visa.webp" alt="">
          <img src="../footer/images/maestro.webp" alt="">
+         <img  width="40" height="55" src="../footer/images/Paypal_2014_logo.png" alt="">
          <img src="../footer/images/mastercard.webp" alt="">
          </ul>
         </div>

@@ -151,5 +151,5 @@ Toute autre utilisation non expressément autorisée par écrit par DOMINO’S P
 <h4>16. LOI APPLICABLE</h4>
 <br>
 <p>Les présentes conditions générales de prestation de services sont soumises à la loi française et l’ensemble de ses clauses doit être interprété selon le droit français.</p>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>

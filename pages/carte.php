@@ -99,7 +99,6 @@ $(document).ready(function() {
      <h1 style="display: flex; align-items: center;">
      <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza</h1>
      <?php include_once '../header/navbar.php'; ?>
-        <?php require_once('../footer.php'); ?>
 </header>
 <br><br>
 <button onclick="showCategory('toutes')">A la une</button>
@@ -470,5 +469,8 @@ $(document).ready(function() {
         <h5>Pour votre santé, évitez de grignoter entre les repas</h5>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+<?php require_once('../footer.php'); ?>
+</footer>
 </body>
 </html>

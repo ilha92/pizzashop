@@ -158,11 +158,11 @@ if (isset($_POST['supprimer'])) {
             echo "<p>Votre panier est vide.</p>";
         } ?>
     </main>
-    <br><br><br><br><br><br>
+    <br><br><br><br>
     <div class="centered">
         <h5>Pour votre santé, évitez de manger trop gras, trop sucré, trop salé</h5>
         <h5>Pour votre santé, évitez de grignoter entre les repas</h5>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

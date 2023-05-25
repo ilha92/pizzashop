@@ -17,7 +17,7 @@ session_start();
     <h1>POLITIQUE DE DIVULGATION RESPONSABLE</h1>
     <br>
     <p>Si vous êtes un client et que vous avez une question ou une préoccupation concernant la manière dont nous traitons vos données personnelles, vous pouvez nous contacter à l'adresse contact@pizzashop.com.</p>
-    <p>La politique de confidentialité de Cestino Pizza peut être consultée à l'adresse suivante : <a href="../footer/personnel.php">https://www.pizzashop.com/politique-de-confidentialite</a>.</p>
+    <p>La politique de confidentialité de Cestino Pizza peut être consultée à l'adresse suivante : <a href="../footer/personnel.php">https://www.cestino.fr/politique-de-confidentialite</a>.</p>
 <br><br>
     <h2>Comment Cestino Pizza gère les failles de sécurité ?</h2>
     <br>
@@ -27,7 +27,7 @@ session_start();
 <br><br>
     <h2>Comment signaler une faille de sécurité ?</h2>
     <br>
-    <p>Vous pouvez signaler des problèmes de sécurité potentiels ou suspects à l'équipe de sécurité de Cestino Pizza en cliquant sur le lien ci-dessous ou en envoyant un courriel à vulnerability@pizzashop.com. Toutes les vulnérabilités signalées doivent respecter les conditions de notre programme de divulgation responsable, disponible ici : <a href="https://pizzashop.responsibledisclosure.com/hc/fr-fr">https://pizzashop.responsibledisclosure.com/hc/fr-fr</a>.</p>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>Vous pouvez signaler des problèmes de sécurité potentiels ou suspects à l'équipe de sécurité de Cestino Pizza en cliquant sur le lien ci-dessous ou en envoyant un courriel à vulnerability@pizzashop.com. Toutes les vulnérabilités signalées doivent respecter les conditions de notre programme de divulgation responsable, disponible ici : <a href="../footer/responsable.php">https://cestino.responsibledisclosure.com/hc/fr-fr</a>.</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

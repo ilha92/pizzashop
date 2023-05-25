@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PizzaShop Fidélité</title>
+    <title>Cestino pizza Fidélité</title>
     <link rel="icon" type="image/x-icon" href="../image/panier.ico">
 </head>
 <body>
@@ -15,11 +15,11 @@ session_start();
         <?php require_once('../footer.php'); ?>
  </header>
 <br><br>
-    <h1>REJOIGNEZ PIZZASHOP FID | COMMENT ÇA MARCHE ? | FAQ | CGU</h1>
+    <h1>REJOIGNEZ Cestino pizza FID | COMMENT ÇA MARCHE ? | FAQ | CGU</h1>
     <br>
     <img width="1000" height="315" src="../footer/images/offert.avif" alt="">
 <br><br>
-    <h2>PizzaShop Fidélité</h2>
+    <h2>Cestino Pizza Fidélité</h2>
     <br>
     <div id="classique" class="pizza">
      <a href="../acces/login.php" class="en-savoir-plus">Je me connecte</a>
@@ -28,13 +28,13 @@ session_start();
 <br><br>
 
     <h3>COMMENT MARCHE LE PROGRAMME DE FIDÉLITÉ ?</h3>
-    <p>Étapes PizzaShop fidélité</p>
+    <p>Étapes Cestino pizza fidélité</p>
 
-    <h4>PizzaShop Pizza</h4>
-    <p>Application PizzaShop fidélité</p>
+    <h4>Cestino Pizza | Pizza</h4>
+    <p>Application Cestino Pizza fidélité</p>
     <p>Pour consulter vos points de fidélité, connectez-vous sur votre compte PizzaShop et accédez à la page Fidélité.</p>
 
-    <h4>Application PizzaShop commande</h4>
+    <h4>Application Cestino Pizza commande</h4>
     <p>Une fois que vous avez gagné une pizza offerte, ajoutez-la dans votre panier en cliquant sur le bouton "utiliser".</p>
 
     <ol>
@@ -54,11 +54,11 @@ session_start();
 
     <h3>FAQ</h3>
 
-    <h4>QUI PEUT PARTICIPER AU PROGRAMME PIZZASHOP FIDÉLITÉ ?</h4>
-    <p>Le programme PizzaShop Fidélité est ouvert à tous les clients PizzaShop.</p>
+    <h4>QUI PEUT PARTICIPER AU PROGRAMME CESTINO PIZZA FIDÉLITÉ ?</h4>
+    <p>Le programme Cestino Pizza Fidélité est ouvert à tous les clients Cestino Pizza.</p>
 
-    <h4>COMMENT PUIS-JE M'INSCRIRE AU PROGRAMME PIZZASHOP FIDÉLITÉ ?</h4>
-    <p>Vous devez créer un compte-client sur pizzashop.fr et adhérer au programme PizzaShop Fidélité. Si vous possédez déjà un compte-client, il vous suffit de vous connecter et d'activer le programme de fidélité sur la page d'accueil.</p>
+    <h4>COMMENT PUIS-JE M'INSCRIRE AU PROGRAMME Cestino Pizza FIDÉLITÉ ?</h4>
+    <p>Vous devez créer un compte-client sur cestino-pizza.fr et adhérer au programme PizzaShop Fidélité. Si vous possédez déjà un compte-client, il vous suffit de vous connecter et d'activer le programme de fidélité sur la page d'accueil.</p>
 
     <h4>COMMENT PUIS-JE GAGNER DES POINTS ?</h4>
     <p>Connectez-vous à votre compte-client et commandez sur pizzashop.fr pour gagner des points. Gagnez 10 points pour toute commande payée de  15€ minimum. Cumulez 10 points maximum par jour, crédités et visibles dans votre compte-client 48 heures maximum après la commande.</p>
@@ -142,6 +142,6 @@ session_start();
   <li>Des promotions spéciales et des réductions sur certains produits.</li>
   <li>Des invitations à des événements et des dégustations.</li>
 </ul>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

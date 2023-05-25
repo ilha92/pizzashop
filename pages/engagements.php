@@ -81,13 +81,13 @@
         <br>
         <p>Nos pizzas sont préparées sous vos yeux et travaillées grâce à un savoir-faire unique de plus de 60 ans.
         </p>
-        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
     </div>
     <h2>MAIS C'EST AUSSI DES INGRÉDIENTS SELECTIONNÉS AVEC SOIN</h2>
     <br><br>
     <p>Une bonne pizza, c’est d’abord de bons ingrédients. Depuis les légumes jusqu’aux fromages, en passant par les viandes, nous sélectionnons nos ingrédients pour leurs qualités nutritionnelles et leur saveur. 
 </p>
-<br><br>
+<br><br><br><br><br><br>
 <div>
     <h2>DES OLIVES KALAMATA BIO</h2>
     <br>

@@ -170,6 +170,7 @@ if (isset($_POST['submit'])) {
 <br>
 <!-- Affichage des avis -->
 <h2>Avis des utilisateurs</h2>
+<br><br>
 <?php
 // Récupérer tous les avis depuis la base de données
 $query = "SELECT * FROM avis";
@@ -211,7 +212,6 @@ if ($result !== false) {
         echo '><i class="ri-heart-line"></i></button>';
         echo '<span>' . $a['likes'] . ' likes</span>';
         echo '</form>';
-        echo '<a href="avis.php?action=supprimer&id=' . $a['id'] . '"><i class="ri-delete-bin-line"></i></a>';
         echo '</div>';
         echo '</div>';
     }
