@@ -422,7 +422,7 @@ $(document).ready(function() {
   <h5><p class="description">Une pizza végétarienne généreuse avec une variété de légumes frais et savoureux, idéale pour les amateurs de légumes.</p></h5>
   <h5><p class="ingredients">Ingrédients : Sauce tomate, mozzarella, roquette, huile d’olive AOP Kalamata.</p></h5>
   <p>Prix : 5 €</p>  
-  <button class="commander" data-produit="Super Veggie" data-prix="7.99">Ajouter au panier <i class="ri-price-tag-3-line"></i></button>
+  <button class="commander" data-produit="Super Veggie" data-prix="5">Ajouter au panier <i class="ri-price-tag-3-line"></i></button>
 </li>
 
       <li>
@@ -442,7 +442,7 @@ $(document).ready(function() {
                 <h5><p class="description">Une pizza végétarienne généreuse avec une variété de légumes frais et savoureux, idéale pour les amateurs de légumes.</p></h5>
                 <h5><p class="ingredients">Ingrédients : Fromage, poivrons, champignons, oignons, tomates, olives, maïs</p></h5>
                 <p>Prix:7.99 €</p>  
-        <button class="commander" data-produit="Vegan Margherita" data-prix="13.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
+        <button class="commander" data-produit="Vegan Margherita" data-prix="7.99">Ajouter au panier<i class="ri-price-tag-3-line"></i></button>
       </li>
 </ul>
 </div>

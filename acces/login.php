@@ -59,7 +59,7 @@ session_start();
         
     </form>
 <?php 
-$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;','root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;', 'root', '');
 
 // Vérifier si l'utilisateur est déjà connecté
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {

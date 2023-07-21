@@ -1,6 +1,6 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;', 'root', '');
+$bdd = new PDO('mysql:host=cl1-sql12;dbname=mvx77601;charset=utf8;', 'mvx77601', 'admin');
 if (isset($_POST['new_username'])) {
     $newUsername = filter_var($_POST['new_username'], FILTER_SANITIZE_STRING);
 

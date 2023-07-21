@@ -368,7 +368,7 @@ th {
 
 /* Style pour le bouton de suppression */
 .supprimer {
-  background-color: #f44336;
+  background-color: #db1608;
   color: #fff;
   padding: 6px 12px;
   border: none;
@@ -556,7 +556,7 @@ p {
   padding: 20px;
   color: #fff;
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.01s ease;
 }
 
 #site-footer.hidden {
@@ -696,4 +696,3 @@ footer a:hover {
         figcaption {
           margin-left: 10px; /* Espacement entre l'image et le texte */
         }
-        

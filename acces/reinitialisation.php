@@ -1,6 +1,6 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;','root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;', 'root', '');
 ?>
 <!DOCTYPE html>
 <html lang="en">

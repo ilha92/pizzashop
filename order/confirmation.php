@@ -1,6 +1,6 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=pizza;charset=utf8;', 'root', '');
+$bdd = new PDO('mysql:host=cl1-sql12;dbname=mvx77601;charset=utf8;', 'mvx77601', 'admin');
 
 if (isset($_POST['valider'])) {
     // Vérifier si l'utilisateur est déjà connecté
@@ -23,7 +23,6 @@ if (isset($_POST['valider'])) {
         $stmt->bindParam('pseudo', $pseudo);
         $stmt->bindParam('email', $email);
         $stmt->bindParam('montant', $montant);
-
         if ($stmt->execute()) {
             // Rediriger vers une page de remerciements
             header("Location: ../order/confirmation.php");
@@ -33,7 +32,6 @@ if (isset($_POST['valider'])) {
         }
     }
 }
-
 // Fermer la connexion à la base de données
 $bdd = null;
 ?>
@@ -126,7 +124,7 @@ $bdd = null;
     <h1 style="display: flex; align-items: center;">
         <img src="../image/pizza/panier.png" width="80" height="60" alt="Logo Pizza Shop" style="margin-right: 10px;">Cestino Pizza
     </h1>
-    <?php include_once '../header/navbar.php'; ?>
+    <?php include_once ('../header/navbar.php'); ?>
     <?php require_once('../footer.php'); ?>
 </header>
     <br><br>
